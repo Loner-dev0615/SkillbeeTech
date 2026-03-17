@@ -29,6 +29,7 @@ const Onboarding = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-white p-6 font-sans">
       <div className="w-full max-w-2xl mb-8 mr-220 ">
+        
         <button 
           onClick={handleGoBack}
           aria-label="Go back"
@@ -37,10 +38,9 @@ const Onboarding = () => {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
           </svg>
         </button>
+        <img src="/bee2.svg" alt="" className='w-67.34 ml-20 mt-5' />
       </div>
-      <div>
-        <img src="/bee.svg" alt="marybro1" />
-       </div>
+     
       
       
       <h1 className="text-3xl font-bold text-gray-900 mb-2">What do you want to improve?</h1>

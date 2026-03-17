@@ -1,21 +1,20 @@
 import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom'; // Added this for navigation
+import { useNavigate } from 'react-router-dom'; 
 import { IoEyeOutline, IoEyeOffOutline } from "react-icons/io5";
 
 const JoinNow = () => {
-    const navigate = useNavigate(); // Hook to change pages
+    const navigate = useNavigate(); 
     const [isLogin, setIsLogin] = useState(true);
     const [showPassword, setShowPassword] = useState(false);
     const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
-    // --- Added State to track inputs ---
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
 
-    // --- Validation Logic ---
+    
     const handleAction = () => {
         if (isLogin) {
             if (email && password) {
@@ -42,11 +41,17 @@ const JoinNow = () => {
                <div className="mt-70 ml-55.75 items-center gap-2.75">
                  {isLogin ? (
                     <>
-                        <h1 className='text-white text-4xl mb-4'>Login into your Skillbee Account</h1>
+                    <div className="">
+                        <img src="logosign.svg" alt="" className='mb-10' />
+                    </div>
+                        <h1 className='text-white text-4xl mb-4 mx-auto'>Login into your Skillbee Account</h1>
                         <p className='text-white'>Start your 5-min daily journey</p>
                     </>
                 ) : (
                     <>
+                       <div className="">
+                        <img src="logosign.svg" alt="" className='mb-15' />
+                    </div>
                         <h1 className='text-white text-4xl mb-4'>Join Skillbee</h1>
                         <p className='text-white'>Start your 5-min daily journey</p>
                     </>
@@ -55,7 +60,7 @@ const JoinNow = () => {
             </div>
 
             
-            <div className='justify-center items-center flex flex-col gap-4 flex-1 overflow-y-auto border-96 p-3 border-gray-300 bg-white rounded-[150px]'>
+            <div className='justify-center items-center flex flex-col gap-4 flex-1 overflow-y-auto border-96 p-3 border-gray-300 bg-white rounded-[140px] p-6 w-107 ml-40 mr-14 w-full'>
                 <div className='flex gap-0 bg-white rounded-md w-107 overflow-hidden text-center mb-4  '>
                     <button 
                         onClick={() => setIsLogin(true)}
@@ -105,7 +110,7 @@ const JoinNow = () => {
                             <p className='text-blue-500 hover:underline cursor-pointer'>Forgot password?</p>
                         </div>
 
-                        {/* Changed <a> to <button> to allow check */}
+                        
                         <button onClick={handleAction} className="bg-[#EE5822] text-white py-2 px-4 rounded-[45px] w-107 border border-orange-500 hover:bg-transparent hover:text-orange-500 cursor-pointer text-center">Login</button>
                     </>
                 )}
@@ -154,7 +159,7 @@ const JoinNow = () => {
                             <span className='text-gray-500'>Remember me</span>
                         </div>
 
-                        {/* Changed <a> to <button> to allow check */}
+        
                         <button onClick={handleAction} className='bg-[#EE5822] text-white py-2 px-4 rounded-[45px] w-107 border border-orange-500 hover:bg-transparent hover:text-orange-500 cursor-pointer text-center'>Sign Up</button>
                     </>
                 )}
