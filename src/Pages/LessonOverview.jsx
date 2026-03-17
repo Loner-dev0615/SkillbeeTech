@@ -1,0 +1,147 @@
+import React from 'react'
+
+const LessonOverview = () => {
+  return (
+    <div>
+      
+<div class="max-w-6xl mx-auto px-6 py-10 bg-gray-100">
+
+ 
+  <div class="flex justify-between items-center mb-6">
+    
+    <input 
+      type="text" 
+      img src="search.svg"
+      placeholder="Search for lesson topics"
+      class="w-160 px-20 py-2 rounded-md bg-gray-200 focus:outline-none"
+    />
+
+    <div class="flex items-center gap-3">
+      <div class="text-right">
+        <p class="font-semibold text-sm">Alex Johnson</p>
+        <p class="text-gray-500 text-xs">Beginner</p>
+      </div>
+      <img src="dark.svg" class="w-10 h-10 rounded-full"/>
+    </div>
+
+  </div>
+
+  
+  <h1 class="text-2xl font-bold mb-2">
+    Excel Basics for Beginners
+  </h1>
+
+  <p class="text-gray-600 text-sm mb-6">
+    Master The Fundamentals Of Spreadsheet Management And Data Organization From Scratch.
+  </p>
+
+  
+  <div class="relative rounded-xl overflow-hidden mb-10">
+    <img src="video.svg" alt="Lesson Video"
+         class="w-[651px] h-[283px] object-cover"/>
+
+   
+   
+
+ 
+    
+  </div>
+
+
+  <div class="grid md:grid-cols-3 gap-4">
+
+    
+    <div class="md:col-span-2">
+
+      <h2 class="font-semibold mb-6 flex items-center gap-2">
+        <span class="w-1 h-5 bg-[#EC5B13] inline-block"></span>
+        What you'll learn
+      </h2>
+
+      <div class="space-y-4">
+
+      
+        <div class="bg-white p-4 rounded-lg flex gap-3 items-start shadow-sm w-120">
+          <div class="text-orange-500">
+            <img src="tick.svg" alt="" />
+          </div>
+          <div>
+            <p class="font-medium text-sm">The 5 essential Excel functions</p>
+            <p class="text-gray-500 text-xs">Learn SUM, AVERAGE, MIN, MAX, and COUNT to handle any basic data set.</p>
+          </div>
+        </div>
+
+        <div class="bg-white p-4 rounded-lg flex gap-3 items-start shadow-sm w-120">
+          <div class="text-orange-500">
+            <img src="tick.svg" alt="" />
+          </div>
+          <div>
+            <p class="font-medium text-sm">How to use VLOOKUP in real scenarios</p>
+            <p class="text-gray-500 text-xs">Master the art of looking up data across multiple sheets efficiently.</p>
+          </div>
+        </div>
+
+        <div class="bg-white p-4 rounded-lg flex gap-3 items-start shadow-sm w-120">
+          <div class="text-orange-500">
+            <img src="tick.svg" alt="" />
+          </div>
+          <div>
+            <p class="font-medium text-sm">Pivot Tables for quick reporting</p>
+            <p class="text-gray-500 text-xs">Summarize thousands of rows of data into a neat report in seconds.</p>
+          </div>
+        </div>
+
+        <div class="bg-white p-4 rounded-lg flex gap-3 items-start shadow-sm w-120">
+          <div class="text-orange-500">
+            <img src="tick.svg" alt="" />
+          </div>
+          <div>
+            <p class="font-medium text-sm">Conditional Formatting mastery</p>
+            <p class="text-gray-500 text-xs">Make your data talk visually with colors, scales, and icons.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+   
+    <div>
+
+      <div class="bg-[#f6edea] p-6 rounded-lg shadow-sm mt-60 ml-10 ">
+
+        <h3 class="font-semibold mb-4 flex items-center gap-2">
+          <span class="text-[#EC5B13]">
+            <img src="Icon.png" alt="" />
+          </span>
+          Lesson Details
+        </h3>
+
+        <div class="space-y-1 text-sm text-gray-600">
+          <div class="flex justify-between">
+            <span>Duration</span>
+            <span class="font-medium text-black">45 Minutes</span>
+          </div>
+
+          <div class="flex justify-between">
+            <span>Level</span>
+            <span class="font-medium text-black">Beginner</span>
+          </div>
+
+          <div class="flex justify-between">
+            <span>Total Lessons</span>
+            <span class="font-medium text-black">12 Modules</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+    </div>
+  )
+}
+
+export default LessonOverview

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Home, BarChart2, Bookmark, User, LogOut, PlayCircle, MessageSquare, Edit3, MessageCircle } from 'lucide-react';
+import { Home, BarChart2, Bookmark, User, LogOut, PlayCircle, MessageSquare, Edit3, MessageCircle, Settings } from 'lucide-react';
 import { FaPlayCircle } from "react-icons/fa";
 import Landing from '../Component/Landing';
 
@@ -30,12 +30,16 @@ const Dashboard = () => {
 
   return (
     <div className="flex min-h-screen bg-white font-sans text-slate-900">
-      <aside className="w-64 border-r border-gray-100 p-8 flex flex-col justify-between">
+      <aside className="w-64 border-r border-gray-100 p-8 flex flex-col gap-4 justify-between">
         <nav className="space-y-4">
           <NavItem icon={<Home size={20} />} label="Home" active />
+          <NavItem icon={<MessageSquare size={20} />} label="LessonOverview"  />
+          <NavItem icon={<Edit3 size={20} />} label="Lesson Content" />
           <NavItem icon={<BarChart2 size={20} />} label="Tracks" />
+          <NavItem icon={<MessageCircle size={20} />} label="Quiz" />
           <NavItem icon={<Bookmark size={20} />} label="Bookmarks" />
           <NavItem icon={<User size={20} />} label="Profile" />
+          <NavItem icon={<Settings size={20} />} label="Settings" />
         </nav>
         
         <a href='/Landing'>
