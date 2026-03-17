@@ -3,7 +3,10 @@ import { useNavigate } from 'react-router-dom';
 
 const skillsList = [
   "Public Speaking", "Time Management", "Excel & Data", "Leadership",
-  "Marketing", "Writing", "Coding", "Design Thinking", "Finance"
+  "Marketing", "Writing", "Coding", "Design Thinking",
+
+  
+                          "Finance"
 ];
 
 const Onboarding = () => {
@@ -35,7 +38,11 @@ const Onboarding = () => {
           </svg>
         </button>
       </div>
-
+      <div>
+        <img src="/bee.svg" alt="marybro1" />
+       </div>
+      
+      
       <h1 className="text-3xl font-bold text-gray-900 mb-2">What do you want to improve?</h1>
       <p className="text-gray-500 mb-8">Select all that apply - we'll build your personalized path</p>
       

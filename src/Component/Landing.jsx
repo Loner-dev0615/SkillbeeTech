@@ -1,9 +1,32 @@
 import React from 'react';
 import Herosect from './Herosect';
+import Welcome from './Welcome';
+import JoinNow from '../Pages/JoinNow';
 
 const Landing = () => {
   return (
     <div>
+      <nav className="flex items-center justify-between py-6 px-8">
+        <div className="flex items-center gap-2">
+          <img src="skill.svg" alt="Skillbee Logo" className="w-30 50" />
+         
+        </div>
+        <div className="flex items-center gap-25">
+          <div className="flex items-center gap-7 pr-70">
+            <div className='gap-10'><a href="#" className="text-gray-600 hover:text-gray-900 transition">How it works</a></div>
+            <div className='gap-10'><a href="#" className="text-gray-600 hover:text-gray-900 transition">Courses</a></div>
+            <div className='gap-10'><a href="#" className="text-gray-600 hover:text-gray-900 transition">Pricing</a></div>
+          </div>
+          
+          <div className=''>
+            <a href="/join" className="text-gray-600 hover:text-gray-900 transition">Sign Up</a>
+          </div>
+
+          <a href="/welcome" className="bg-[#EE5822] text-white px-4 py-2 rounded-full shadow hover:bg-orange-600 transition">
+            Get Started
+          </a>
+        </div>
+      </nav>
       <section className="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-12 items-center">
         <div>
           <h1 className="text-5xl font-bold leading-tight text-gray-900">

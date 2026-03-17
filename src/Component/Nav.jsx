@@ -1,13 +1,14 @@
 import React from 'react'
 import { IoFlashOutline } from "react-icons/io5";
 import { GoChevronRight } from "react-icons/go";
+import vectorImage from '../../public/Vector.svg'
 
 const Nav = () => {
   return (
     <div>
       <nav className='flex justify-between px-20 py-10 items-center'>
         <div className="flex gap-2 items-center">
-          <img src="/Vector.svg" alt="" />
+          <img src={vectorImage} alt="Vector" />
            <span className='text-[#EE5822] text-2xl font-semibold h-8.5 w-26.75 font-600'>
             Skillbee
            </span>

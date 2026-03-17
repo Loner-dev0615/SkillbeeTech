@@ -1,10 +1,40 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'; // Added this for navigation
 import { IoEyeOutline, IoEyeOffOutline } from "react-icons/io5";
 
 const JoinNow = () => {
+    const navigate = useNavigate(); // Hook to change pages
     const [isLogin, setIsLogin] = useState(true);
     const [showPassword, setShowPassword] = useState(false);
     const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+
+    // --- Added State to track inputs ---
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [firstName, setFirstName] = useState('');
+    const [lastName, setLastName] = useState('');
+    const [confirmPassword, setConfirmPassword] = useState('');
+
+    // --- Validation Logic ---
+    const handleAction = () => {
+        if (isLogin) {
+            if (email && password) {
+                navigate('/dashboard');
+            } else {
+                alert("Please fill in all login details!");
+            }
+        } else {
+            if (firstName && lastName && email && password && confirmPassword) {
+                if (password !== confirmPassword) {
+                    alert("Passwords do not match!");
+                } else {
+                    navigate('/onboarding');
+                }
+            } else {
+                alert("Please fill in all signup details!");
+            }
+        }
+    };
 
     return (
         <div className='flex gap-0 bg-gray-300 mb-0 h-screen w-full'>
@@ -24,7 +54,7 @@ const JoinNow = () => {
                </div>
             </div>
 
-           
+            
             <div className='justify-center items-center flex flex-col gap-4 flex-1 overflow-y-auto border-96 p-3 border-gray-300 bg-white rounded-[150px]'>
                 <div className='flex gap-0 bg-white rounded-md w-107 overflow-hidden text-center mb-4  '>
                     <button 
@@ -54,13 +84,13 @@ const JoinNow = () => {
                     <>
                         <div className='flex flex-col gap-2 bg-white border p-2 rounded-md w-107 left-120px'>
                             <span className='text-gray-500'>Email</span>
-                            <input type="text" className='' placeholder='alexjohnson@gmail.com' />
+                            <input type="text" placeholder='alexjohnson@gmail.com' onChange={(e) => setEmail(e.target.value)} />
                         </div>
 
                         <div className='flex flex-col gap-2 bg-white border p-2 rounded-md w-107 left-120px'>
                             <span className='text-gray-500'>Password</span>
                             <div className='flex justify-between'>
-                                <input type={showPassword ? "text" : "password"} className='' placeholder='XXXXXXXXXXXX' />
+                                <input type={showPassword ? "text" : "password"} placeholder='XXXXXXXXXXXX' onChange={(e) => setPassword(e.target.value)} />
                                 <span className='cursor-pointer' onClick={() => setShowPassword(!showPassword)}>
                                     {showPassword ? <IoEyeOffOutline /> : <IoEyeOutline />}
                                 </span>
@@ -75,7 +105,8 @@ const JoinNow = () => {
                             <p className='text-blue-500 hover:underline cursor-pointer'>Forgot password?</p>
                         </div>
 
-                        <a href="/dashboard" className="bg-[#EE5822] text-white py-2 px-4 rounded-[45px] w-107 left-120px border border-orange-500 hover:bg-transparent hover:text-orange-500 cursor-pointer text-center">Login</a>
+                        {/* Changed <a> to <button> to allow check */}
+                        <button onClick={handleAction} className="bg-[#EE5822] text-white py-2 px-4 rounded-[45px] w-107 border border-orange-500 hover:bg-transparent hover:text-orange-500 cursor-pointer text-center">Login</button>
                     </>
                 )}
 
@@ -84,24 +115,24 @@ const JoinNow = () => {
                         <div className='flex flex-row gap-7 p-auto'>
                             <div className='flex flex-col gap-2 bg-white border p-2 rounded-md max-w-sm left-120px max-h-20'>
                                 <span className='text-gray-500'>First name</span>
-                                <input type="text" placeholder='Alex' />
+                                <input type="text" placeholder='Alex' onChange={(e) => setFirstName(e.target.value)} />
                             </div>
 
                             <div className='flex flex-col gap-2 bg-white border p-2 rounded-md max-w-sm left-120px'>
                                 <span className='text-gray-500'>Last name</span>
-                                <input type="text" placeholder='Johnson' />
+                                <input type="text" placeholder='Johnson' onChange={(e) => setLastName(e.target.value)} />
                             </div>
                         </div>
 
-                        <div className='flex flex-col gap-2 b   g-white border p-2 rounded-md w-107 left-120px'>
+                        <div className='flex flex-col gap-2 bg-white border p-2 rounded-md w-107 left-120px'>
                             <span className='text-gray-500'>Email</span>
-                            <input type="text" className='' placeholder='alexjohnson@gmail.com' />
+                            <input type="text" placeholder='alexjohnson@gmail.com' onChange={(e) => setEmail(e.target.value)} />
                         </div>
 
                         <div className='flex flex-col gap-2 bg-white border p-2 rounded-md w-107 left-120px'>
                             <span className='text-gray-500'>Password</span>
                             <div className='flex justify-between'>
-                                <input type={showPassword ? "text" : "password"} className='' placeholder='XXXXXXXXXXXX' />
+                                <input type={showPassword ? "text" : "password"} placeholder='XXXXXXXXXXXX' onChange={(e) => setPassword(e.target.value)} />
                                 <span className='cursor-pointer' onClick={() => setShowPassword(!showPassword)}>
                                     {showPassword ? <IoEyeOffOutline /> : <IoEyeOutline />}
                                 </span>
@@ -111,7 +142,7 @@ const JoinNow = () => {
                         <div className='flex flex-col gap-2 bg-white border p-2 rounded-md w-107 left-120px'>
                             <span className='text-gray-500'>Confirm Password</span>
                             <div className='flex justify-between'>
-                                <input type={showConfirmPassword ? "text" : "password"} className='' placeholder='XXXXXXXXXXXX' />
+                                <input type={showConfirmPassword ? "text" : "password"} placeholder='XXXXXXXXXXXX' onChange={(e) => setConfirmPassword(e.target.value)} />
                                 <span className='cursor-pointer' onClick={() => setShowConfirmPassword(!showConfirmPassword)}>
                                     {showConfirmPassword ? <IoEyeOffOutline /> : <IoEyeOutline />}
                                 </span>
@@ -123,7 +154,8 @@ const JoinNow = () => {
                             <span className='text-gray-500'>Remember me</span>
                         </div>
 
-                        <a href="/onboarding" className='bg-[#EE5822] text-white py-2 px-4 rounded-[45px] w-107 left-120px border border-orange-500 hover:bg-transparent hover:text-orange-500 cursor-pointer text-center'>Sign Up</a>
+                        {/* Changed <a> to <button> to allow check */}
+                        <button onClick={handleAction} className='bg-[#EE5822] text-white py-2 px-4 rounded-[45px] w-107 border border-orange-500 hover:bg-transparent hover:text-orange-500 cursor-pointer text-center'>Sign Up</button>
                     </>
                 )}
             </div>

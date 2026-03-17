@@ -1,6 +1,7 @@
 import React from 'react';
 import { Home, BarChart2, Bookmark, User, LogOut, PlayCircle, MessageSquare, Edit3, MessageCircle } from 'lucide-react';
 import { FaPlayCircle } from "react-icons/fa";
+import Landing from '../Component/Landing';
 
 const Dashboard = () => {
   const recommendations = [
@@ -37,10 +38,12 @@ const Dashboard = () => {
           <NavItem icon={<User size={20} />} label="Profile" />
         </nav>
         
-        <button className="flex items-center gap-3 text-red-500 hover:text-red-600 transition-colors font-medium">
-          <LogOut size={20} />
-          <span>Sign-out</span>
-        </button>
+        <a href='/Landing'>
+          <button className="flex items-center gap-3 text-red-500 hover:text-red-600 transition-colors font-medium">
+            <LogOut size={20} />
+            <span>Sign-out</span>
+          </button>
+        </a>
       </aside>
 
       <main className="flex-1 p-16 max-w-7xl">
