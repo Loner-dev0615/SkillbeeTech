@@ -5,7 +5,8 @@ import JoinNow from '../Pages/JoinNow';
 
 const Landing = () => {
   return (
-    <div>
+  <div className="">
+      <div>
       <nav className="flex items-center justify-between py-6 px-8">
         <div className="flex items-center gap-2">
           <img src="skill.svg" alt="Skillbee Logo" className="w-30 50" />
@@ -67,6 +68,7 @@ const Landing = () => {
       </section>\
       <Herosect />
     </div>
+  </div>
   );
 };
 

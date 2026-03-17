@@ -34,8 +34,8 @@ const Dashboard = () => {
           <button className="flex items-center gap-3 text-red-500 hover:text-red-600 transition-colors font-medium">
             <LogOut size={20} />
             <span>Sign-out</span>
-          </a>
-        </button>
+          </button>
+        </a>
       </aside>
 
       
@@ -50,7 +50,6 @@ const Dashboard = () => {
             />
           </div>
           <div className="flex items-center gap-3">
-            
             <div className="relative">
               <img src="Frame 271.svg" alt="Marybro" className="w-30 h-10 rounded-full border border-gray-200" />
               <div className="absolute bottom-0 right-0 w-3 h-3 bg-green-500 border-2 border-white rounded-full"></div>
@@ -61,8 +60,7 @@ const Dashboard = () => {
         <p className="text-gray-400 text-xs font-bold uppercase mb-2">Monday, March 16</p>
         <h1 className="text-3xl font-bold mb-6">Good morning, Alex</h1>
 
-        
-        <div className="bg-[#f35b23] `rounded-[32px] p-10 text-white relative overflow-hidden mb-12 rounded-2xl">
+        <div className="bg-[#f35b23] rounded-4xl p-10 text-white relative overflow-hidden mb-12">
           <div className="relative z-10">
             <span className="bg-white/20 text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">Today's Lesson</span>
             <h2 className="text-5xl font-extrabold mt-6 mb-8 max-w-lg leading-tight">
@@ -86,7 +84,6 @@ const Dashboard = () => {
           </div>
         </div>
 
-        
         <div className="flex justify-between items-center mb-6">
           <h3 className="text-xl font-bold">My Tracks</h3>
           <button className="text-xs font-bold text-gray-600">View All Tracks &rsaquo;</button>
@@ -112,56 +109,47 @@ const Dashboard = () => {
         </div>
       </main>
 
-    
-      <aside className="w-80 p-8 flex flex-col gap-8">
-        <div>
-          <div className="flex justify-between mb-6">
-            <h4 className="text-[10px] font-black text-gray-400 uppercase tracking-widest">Recommended for you</h4>
-            <h4 className="text-[10px] font-black text-gray-300 uppercase tracking-widest">New Feed</h4>
-          </div>
-          <div className="space-y-6">
-            {recommendations.map((rec, i) => (
-              <div key={i} className="flex items-center justify-between group cursor-pointer">
-                <div className="flex items-center gap-4">
-                  <BookOpen size={18} className="text-gray-600" />
-                  <div>
-                    <h5 className="text-sm font-bold leading-tight">{rec.title}</h5>
-                    <p className="text-[10px] text-gray-400 font-bold uppercase mt-1">{rec.category} • {rec.duration}</p>
-                  </div>
-                </div>
-                <div className="w-7 h-7 rounded-full border border-gray-200 flex items-center justify-center text-gray-300 group-hover:border-orange-500 group-hover:text-orange-500">
-                  <Play fill="currentColor" size={10} />
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+                  {/* Recommendations sidebar */}
+                  <aside className="w-80 p-8 flex flex-col gap-8">
+                    <div>
+                      <div className="flex justify-between mb-6">
+                        <h4 className="text-[10px] font-black text-gray-400 uppercase tracking-widest">Recommended for you</h4>
+                        <h4 className="text-[10px] font-black text-gray-300 uppercase tracking-widest">New Feed</h4>
+                      </div>
+                      <div className="space-y-6">
+                        {recommendations.map((rec, i) => (
+                          <div key={i} className="flex items-center justify-between group cursor-pointer">
+                            <div className="flex items-center gap-4">
+                              <BookOpen size={18} className="text-gray-600" />
+                              <div>
+                                <h5 className="text-sm font-bold leading-tight">{rec.title}</h5>
+                                <p className="text-[10px] text-gray-400 font-bold uppercase mt-1">{rec.category} • {rec.duration}</p>
+                              </div>
+                            </div>
+                            <div className="w-7 h-7 rounded-full border border-gray-200 flex items-center justify-center text-gray-300 group-hover:border-orange-500 group-hover:text-orange-500">
+                              <Play fill="currentColor" size={10} />
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
 
-        
-        <div className="mt-auto bg-white border border-dashed border-gray-200 `rounded-[32px] p-8 text-center flex flex-col items-center">
-          <div className="w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center mb-6">
-            <CheckCircle className="text-gray-800" />
-          </div>
-          <h4 className="text-xl font-bold mb-2">Advance Your Career</h4>
-          <p className="text-xs text-gray-400 mb-8 leading-relaxed">
-            Unlock all premium tracks and certifications with our annual plan.
-          </p>
-          <button className="w-full bg-[#f35b23] text-white py-4 rounded-2xl font-bold shadow-lg shadow-orange-200">
-            Upgrade to Premium
-          </button>
-        </div>
-      </aside>
+                    <div className="mt-auto bg-white border border-dashed border-gray-200 rounded-4xl p-8 text-center flex flex-col items-center">
+                      <div className="w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center mb-6">
+                        <CheckCircle className="text-gray-800" />
+                      </div>
+                      <h4 className="text-xl font-bold mb-2">Advance Your Career</h4>
+                      <p className="text-xs text-gray-400 mb-8 leading-relaxed">
+                        Unlock all premium tracks and certifications with our annual plan.
+                      </p>
+                      <button className="w-full bg-[#f35b23] text-white py-4 rounded-4xl font-bold shadow-lg shadow-orange-200">
+                        Upgrade to Premium
+                      </button>
+                    </div>
+                  </aside>
     </div>
   );
 };
 
-const NavItem = ({ icon, label, active = false }) => (
-  <div className={`flex items-center gap-4 p-3 rounded-xl cursor-pointer transition-all ${
-    active ? 'bg-orange-50 text-[#f35b23] font-bold' : 'text-gray-400 hover:text-gray-600 font-medium'
-  }`}>
-    {icon}
-    <span className="text-sm">{label}</span>
-  </div>
-);
-
 export default Dashboard;
+    
