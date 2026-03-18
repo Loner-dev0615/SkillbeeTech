@@ -9,7 +9,7 @@ const Sidebar = () => {
   const isPathActive = (path) => location.pathname === path;
 
   return (
-    <aside className="w-72 border-r border-gray-100 p-8 flex flex-col justify-between h-screen sticky top-0 bg-white shadow-sm z-50">
+    <aside className="w-72 border-r border-gray-100  flex flex-col justify-between h-screen sticky top-0 bg-white shadow-sm z-50">
       <div>
         <div className="flex items-center gap-3 px-4">
           <div className="">
@@ -18,7 +18,7 @@ const Sidebar = () => {
          
         </div>
 
-        <nav className="space-y-2">
+        <nav className="space-y-2 mb-40">
          
           <NavItem to="/dashboard" icon={<Home size={20} />} label="Home" active={isPathActive('/dashboard')} />
            <NavItem to="/dashboard/lessonOverview" icon={<MessageSquare size={20} />} label="Lesson Overview" active={isPathActive('/dashboard/lessonOverview')} />
