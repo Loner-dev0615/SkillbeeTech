@@ -5,17 +5,8 @@ const Profile = () => {
     <div>
     
 <section className="bg-gray-100 font-sans">
-        <div className="max-w-6xl mx-auto p-6">
-          <div className="flex justify-between items-center mb-6">
-            <input type="text" placeholder="Search skills tracks, or lessons....." className="w-1/2 px-4 py-2 rounded-lg bg-gray-200 outline-none" />
-            <div className="flex items-center gap-3">
-              <div className="text-right">
-                <h3 className="font-semibold">Alex Johnson</h3>
-                <p className="text-sm text-gray-500">Beginner</p>
-              </div>
-              <img src="dark.svg" className="w-10 h-10 rounded-full" />
-            </div>
-          </div>
+        <div className="w-full mx-auto p-6">
+          
           <div className="bg-white rounded-2xl p-6 shadow">
             <div className=" justify-between items-start">
               <div className="flex gap-4">

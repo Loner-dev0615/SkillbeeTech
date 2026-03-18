@@ -7,24 +7,7 @@ const LessonOverview = () => {
 <div class="max-w-6xl mx-auto px-6 py-10 bg-gray-100">
 
  
-  <div class="flex justify-between items-center mb-6">
-    
-    <input 
-      type="text" 
-      img src="search.svg"
-      placeholder="Search for lesson topics"
-      class="w-160 px-20 py-2 rounded-md bg-gray-200 focus:outline-none"
-    />
-
-    <div class="flex items-center gap-3">
-      <div class="text-right">
-        <p class="font-semibold text-sm">Alex Johnson</p>
-        <p class="text-gray-500 text-xs">Beginner</p>
-      </div>
-      <img src="dark.svg" class="w-10 h-10 rounded-full"/>
-    </div>
-
-  </div>
+ 
 
   
   <h1 class="text-2xl font-bold mb-2">

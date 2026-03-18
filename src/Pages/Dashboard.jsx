@@ -33,26 +33,7 @@ const Dashboard = () => {
 
   return (
     <div className="flex-1 bg-white font-sans text-slate-900 p-8 overflow-y-auto min-h-screen">
-      <header className="flex justify-between items-start mb-8">
-        <div className="relative w-full max-w-xl">
-          <Search className="absolute left-4 top-3.5 text-gray-400" size={18} />
-          <input
-            type="text"
-            placeholder="Search skills tracks, or lessons..."
-            className="w-full bg-[#EDECEC] rounded-xl py-3 pl-12 pr-4 focus:outline-none"
-          />
-        </div>
-
-        <div className="flex ml-4 items-center gap-4">
-          <div className="text-right">
-            <h1 className="font-bold">Alex Johnson</h1>
-            <p className="text-xs text-gray-500 uppercase font-bold tracking-wider">Beginner</p>
-          </div>
-          <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-orange-100 shadow-sm">
-            <img src="sam.jpg" alt="Alex Johnson" className="w-full h-full object-cover" />
-          </div>
-        </div>
-      </header>
+    
 
       <p className="text-gray-400 text-xs font-bold uppercase mb-2">{currentDate}</p>
       <h1 className="text-3xl font-bold mb-6">{greeting}, Alex</h1>
