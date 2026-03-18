@@ -7,10 +7,10 @@ import Footer from './Footer'
 
 const Herosect = () => {
     return (
-        <div>
-            <section className="max-w-7xl mx-auto px-6 py-16">
+        <div className='bg-[#f8f6f6]'>
+            <section className="max-w-7xl mx-auto px-6 py-16 ">
 
-                <h2 class="text-3xl font-bold mb-10">
+                <h2 className="text-3xl font-bold mb-10">
                     How Skillbee works:
                 </h2>
 
