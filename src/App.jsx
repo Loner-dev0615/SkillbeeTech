@@ -15,6 +15,7 @@ import Profile from './Pages/Profile'
 import LessonOverview from './Pages/LessonOverview'
 import LessonContent from './Pages/LessonContent'
 import DashboardLayout from './Pages/DashboardLayout'
+import Bookmark from './Pages/Bookmark';
 
 const App = () => {
   return (
@@ -35,7 +36,7 @@ const App = () => {
           <Route path="lessonContent" element={<LessonContent />} />
           <Route path="quiz" element={<div className="p-8">Quiz Page (Coming Soon)</div>} />
           <Route path="tracks" element={<div className="p-8">Tracks Page (Coming Soon)</div>} />
-          <Route path="bookmarks" element={<div className="p-8">Bookmarks Page (Coming Soon)</div>} />
+          <Route path="bookmarks" element={<Bookmark />} />
           <Route path="profile" element={<Profile />} />
         </Route>
 

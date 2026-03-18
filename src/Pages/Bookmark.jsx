@@ -1,11 +1,14 @@
-import React from 'react'
+import CourseProgress from './CourseProgress';
 
-const Bookmark = () => {
+function App() {
   return (
-    <div>
-      
+    <div className="p-6 max-w-3xl mx-auto">
+      <CourseProgress 
+        progress={25}
+        completedLessons={3}
+        totalLessons={6}
+        nextLesson="Visual Storytelling Techniques"
+      />
     </div>
-  )
+  );
 }
-
-export default Bookmark
