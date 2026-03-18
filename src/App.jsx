@@ -38,9 +38,10 @@ const App = () => {
           <Route index element={<Dashboard />} />
           <Route path="lessonOverview" element={<LessonOverview />} />
           <Route path="lessonContent" element={<LessonContent />} />
+          <Route path="/profile" element={<Profile />} />
         </Route>
 
-        <Route path="/profile" element={<Profile />} />
+        
         
         {/* Redirects or Fallbacks could be added here */}
       </Routes>
