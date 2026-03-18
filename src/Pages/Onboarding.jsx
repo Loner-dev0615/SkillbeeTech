@@ -38,7 +38,7 @@ const Onboarding = () => {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
           </svg>
         </button>
-        <img src="/bee2.svg" alt="" className='w-67.34 ml-20 mt-5' />
+        <img src="/bee2.svg" alt="" className='w-67.34 ml-55 mt-5' />
       </div>
      
       

@@ -1,6 +1,7 @@
 import React from 'react';
-import { Home, BarChart2, Bookmark, User, LogOut, PlayCircle, MessageSquare, Edit3, MessageCircle } from 'lucide-react';
+import { Home, BarChart2, Bookmark, User, LogOut, PlayCircle, MessageSquare, Edit3, MessageCircle, Search, BookOpen, Play, CheckCircle } from 'lucide-react';
 import { FaPlayCircle } from "react-icons/fa";
+import NavItem from '../Component/NavItem';
 
 
 const Dashboard = () => {
@@ -41,7 +42,7 @@ const Dashboard = () => {
       
       <main className="flex-1 p-8 overflow-y-auto">
         <header className="flex justify-between items-start mb-8">
-          <div className="relative w-full max-w-xl">
+          <div className="relative w-full max-w-xl"> 
             <Search className="absolute left-4 top-3.5 text-gray-400" size={18} />
             <input 
               type="text" 
@@ -49,12 +50,17 @@ const Dashboard = () => {
               className="w-full bg-[#EDECEC] rounded-xl py-3 pl-12 pr-4 focus:outline-none"
             />
           </div>
-          <div className="flex items-center gap-3">
-            <div className="relative">
-              <img src="Frame 271.svg" alt="Marybro" className="w-30 h-10 rounded-full border border-gray-200" />
-              <div className="absolute bottom-0 right-0 w-3 h-3 bg-green-500 border-2 border-white rounded-full"></div>
-            </div>
+         <div className='flex ml-4 '>
+          <div className="w-40">
+            <h1 className='font-bold'>
+              Alex johnson
+            </h1>
+            <p>
+              Beginner
+            </p>
           </div>
+          <img src="dark.svg" alt="" />
+         </div>
         </header>
 
         <p className="text-gray-400 text-xs font-bold uppercase mb-2">Monday, March 16</p>
@@ -120,14 +126,14 @@ const Dashboard = () => {
                         {recommendations.map((rec, i) => (
                           <div key={i} className="flex items-center justify-between group cursor-pointer">
                             <div className="flex items-center gap-4">
-                              <BookOpen size={18} className="text-gray-600" />
+                             <img src="book.svg" alt="" />
                               <div>
                                 <h5 className="text-sm font-bold leading-tight">{rec.title}</h5>
                                 <p className="text-[10px] text-gray-400 font-bold uppercase mt-1">{rec.category} • {rec.duration}</p>
                               </div>
                             </div>
                             <div className="w-7 h-7 rounded-full border border-gray-200 flex items-center justify-center text-gray-300 group-hover:border-orange-500 group-hover:text-orange-500">
-                              <Play fill="currentColor" size={10} />
+                             <img src="SVG.svg" alt="" />
                             </div>
                           </div>
                         ))}

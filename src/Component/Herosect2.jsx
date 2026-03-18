@@ -112,7 +112,7 @@ const Herosect2 = () => {
 
 
 
-                <div class="grid md:grid-cols-3 gap-10 mt-16 border-t pt-10">
+                <div className="grid md:grid-cols-3 gap-10 mt-16 border-t pt-10">
 
                     <div>
                         <div className="w-10 h-10 bg-purple-200 rounded-md flex items-center justify-center mb-3">

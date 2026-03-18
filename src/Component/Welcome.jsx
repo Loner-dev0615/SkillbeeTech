@@ -6,7 +6,7 @@ import JoinNow from '../Pages/JoinNow'
 const Welcome = () => {
   return (
     <div>
-      <div className="ml-110 mt-20 mb-10">
+      <div className="ml-70 mt-20 mb-10">
         <img src="rena.svg" alt="" />
       </div>
       <div className="justify-center items-center text-center mt-10">
@@ -25,8 +25,8 @@ const Welcome = () => {
           Get Started
         </a>
       </div>
-      <div className="h-0.5 w-300 bg-gray-200 mt-20 mb-20 ml-50">
-        .
+      <div className="h-0.5 w-200 bg-gray-200 mt-20 mb-20 ml-60">
+        
       </div>
       <div className="flex justify-center items-center text-center gap-20 mb-5">
         <div className="justify-center items-center text-center">

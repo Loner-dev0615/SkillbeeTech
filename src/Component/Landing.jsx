@@ -6,7 +6,7 @@ import JoinNow from '../Pages/JoinNow';
 const Landing = () => {
   return (
   <div className="">
-      <div>
+      <div className='bg-[#f8f6f6]'>
       <nav className="flex items-center justify-between py-6 px-8">
         <div className="flex items-center gap-2">
           <img src="skill.svg" alt="Skillbee Logo" className="w-30 50" />
