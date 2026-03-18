@@ -36,7 +36,7 @@ const JoinNow = () => {
     };
 
     return (
-        <div className='flex gap-0 bg-gray-300 mb-0 h-screen w-full'>
+        <div className='flex gap-0 bg-gray-300 mb-0 h-200 w-full'>
             <div className="bg-[#EE5822]   flex-col h-[275.25] w-2xl">
                <div className="mt-70 ml-55.75 items-center gap-2.75">
                  {isLogin ? (
@@ -60,7 +60,7 @@ const JoinNow = () => {
             </div>
 
             
-            <div className='justify-center items-center flex flex-col gap-4 flex-1 overflow-y-auto border-96 p-3 border-gray-300 bg-white rounded-[140px] p-6 w-107 ml-40 mr-14 w-full'>
+            <div className='justify-center items-center flex flex-col gap-4 flex-1 overflow-y-auto border-96 p-3 border-gray-300 bg-white rounded-[140px] p-6 w-107 ml-40 mr-14 w-full '>
                 <div className='flex gap-0 bg-white rounded-md w-107 overflow-hidden text-center mb-4  '>
                     <button 
                         onClick={() => setIsLogin(true)}
@@ -111,13 +111,13 @@ const JoinNow = () => {
                         </div>
 
                         
-                        <button onClick={handleAction} className="bg-[#EE5822] text-white py-2 px-4 rounded-[45px] w-107 border border-orange-500 hover:bg-transparent hover:text-orange-500 cursor-pointer text-center">Login</button>
+                        <button onClick={handleAction} className="bg-[#EE5822] text-white py-2 px-4 rounded-[45px] w-107 border border-orange-500 hover:bg-transparent hover:text-orange-500 cursor-pointer text-center h-20">Login</button>
                     </>
                 )}
 
                 {!isLogin && (
                     <>
-                        <div className='flex flex-row gap-7 p-auto'>
+                        <div className='flex flex-row gap-7 max-h-19'>
                             <div className='flex flex-col gap-2 bg-white border p-2 rounded-md max-w-sm left-120px max-h-20'>
                                 <span className='text-gray-500'>First name</span>
                                 <input type="text" placeholder='Alex' onChange={(e) => setFirstName(e.target.value)} />
@@ -159,8 +159,9 @@ const JoinNow = () => {
                             <span className='text-gray-500'>Remember me</span>
                         </div>
 
-        
+                        <div className='flex items-center justify-center w-107 mt-4'>
                         <button onClick={handleAction} className='bg-[#EE5822] text-white py-2 px-4 rounded-[45px] w-107 border border-orange-500 hover:bg-transparent hover:text-orange-500 cursor-pointer text-center'>Sign Up</button>
+                        </div>
                     </>
                 )}
             </div>

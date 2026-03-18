@@ -38,10 +38,10 @@ const Landing = () => {
             proven habit-building techniques to help you grow every single day.
           </p>
           <div className="flex items-center gap-4 mt-30">
-            <button className="bg-[#EE5822] text-white px-6 py-3 rounded-full shadow hover:bg-orange-600 transition">
+            <button-onclick className="bg-[#EE5822] text-white px-6 py-3 rounded-full shadow hover:bg-orange-600 transition cursor-pointer">
               Start your first lesson
-            </button>
-            <button className="border border-gray-400 px-6 py-3 rounded-full hover:bg-gray-100 transition">
+            </button-onclick>
+            <button className="border border-gray-400 px-6 py-3 rounded-full hover:bg-gray-100 transition cursor-pointer">
               Download App
             </button>
           </div>
