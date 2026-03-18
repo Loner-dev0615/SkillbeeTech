@@ -26,7 +26,7 @@ const Sidebar = () => {
           <NavItem to="/dashboard/tracks" icon={<BarChart2 size={20} />} label="My Tracks" active={isPathActive('/dashboard/tracks')} />
          <NavItem to="/dashboard/bookmarks" icon={<Bookmark size={20} />} label="Bookmarks" active={isPathActive('/dashboard/bookmarks')} />
           <NavItem to="/dashboard/quiz" icon={<MessageCircle size={20} />} label="Quiz" active={isPathActive('/dashboard/quiz')} />
-          <NavItem to="/profile" icon={<User size={20} />} label="Profile" active={isPathActive('/profile')} />
+          <NavItem to="/dashboard/profile" icon={<User size={20} />} label="Profile" active={isPathActive('/profile')} />
           <NavItem to="/settings" icon={<Settings size={20} />} label="Settings" />
        
         </nav>
