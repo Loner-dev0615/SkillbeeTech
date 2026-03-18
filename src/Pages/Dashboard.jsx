@@ -69,7 +69,7 @@ const Dashboard = () => {
             <button className="text-white font-medium text-sm hover:underline cursor-pointer">View Syllabus</button>
           </div>
         </div>
-        {/* Decorative background circles */}
+        
         <div className="absolute -right-20 -top-20 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
         <div className="absolute -right-10 -bottom-10 w-48 h-48 bg-black/10 rounded-full blur-2xl"></div>
       </div>

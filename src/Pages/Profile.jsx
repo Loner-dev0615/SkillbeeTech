@@ -18,13 +18,13 @@ const Profile = () => {
                   </div>
                   <p className="text-sm text-gray-500">Beginner Alex Johnson learning public speaking</p>
                   <div className="mt-6 flex gap-3">
-                    <button className="bg-[#EC5B13] text-white px-4 py-2 rounded-lg text-sm h-[38px] w-[122.44px]">Edit Profile</button>
-                    <button className="border px-4 py-2 rounded-[12px] text-sm border-[#EC5B1333]">Share Profile</button>
+                    <button className="bg-[#EC5B13] text-white px-4 py-2 rounded-lg text-sm `h-[38px] w-[122.44px]">Edit Profile</button>
+                    <button className="border px-4 py-2 `rounded-[12px] text-sm border-[#EC5B1333]">Share Profile</button>
                   </div>
                 </div>
               </div>
               <div className="flex justify-center items-center gap-30 mt-20">
-                <div className="bg-white p-4 rounded-xl text-center flex gap-4 p-6">
+                <div className="bg-white `p-4 rounded-xl text-center flex gap-4 p-6">
                  <div className="">
                    <img src="/hiz.svg" alt="" className=''/>
                  </div>
@@ -33,7 +33,7 @@ const Profile = () => {
                   <p className="text-xs text-gray-500">LESSONS DONE</p>
                 </div>
                 </div>
-                <div className="bg-white p-4 rounded-xl text-center flex gap-4 p-6">
+                <div className="bg-white `p-4 rounded-xl text-center flex gap-4 p-6">
                  <div className="">
                    <img src="/tock.svg" alt="" />
                  </div>
@@ -42,7 +42,7 @@ const Profile = () => {
                   <p className="text-xs text-gray-500">TIME LEARNED</p>
                  </div>
                 </div>
-                <div className="bg-white p-4 rounded-xl text-center flex gap-4 p-6">
+                <div className="bg-white `p-4 rounded-xl text-center flex gap-4 p-6">
                  <div className="">
                    <img src="/fire.svg" alt="" />
                  </div>
