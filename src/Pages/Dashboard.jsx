@@ -32,7 +32,7 @@ const Dashboard = () => {
   }, []);
 
   return (
-    <div className="flex-1 bg-white font-sans text-slate-900 p-8 overflow-y-auto min-h-screen">
+    <div className="flex-1 bg-[#f8f6f6] font-sans text-slate-900 p-8 overflow-y-auto min-h-screen">
     
 
       <p className="text-gray-400 text-xs font-bold uppercase mb-2">{currentDate}</p>

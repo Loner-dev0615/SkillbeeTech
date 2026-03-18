@@ -4,13 +4,13 @@ const Profile = () => {
   return (
     <div>
     
-<section className="bg-gray-100 font-sans">
-        <div className="w-full mx-auto p-6">
+<section className="bg-[#f8f6f6] font-sans">
+        <div className="w-full mx-auto p-6 mb-4">
           
           <div className="bg-white rounded-2xl p-6 shadow">
             <div className=" justify-between items-start">
               <div className="flex gap-4">
-                <img src="Ellipse 10.svg" className="w-30 h-30 rounded-full border-4 border-orange-400 object-cover" />
+                <img src="/Ellipse 10.svg" className="w-30 h-30 rounded-full border-4 border-orange-400 object-cover" />
                 <div>
                   <div className="flex items-center gap-2 mb-6">
                     <h2 className="text-lg font-bold">Alex Johnson</h2>
@@ -26,7 +26,7 @@ const Profile = () => {
               <div className="flex justify-center items-center gap-30 mt-20">
                 <div className="bg-white p-4 rounded-xl text-center flex gap-4 p-6">
                  <div className="">
-                   <img src="hiz.svg" alt="" className=''/>
+                   <img src="/hiz.svg" alt="" className=''/>
                  </div>
                 <div className="">
                     <h3 className="font-bold">42</h3>
@@ -35,7 +35,7 @@ const Profile = () => {
                 </div>
                 <div className="bg-white p-4 rounded-xl text-center flex gap-4 p-6">
                  <div className="">
-                   <img src="tock.svg" alt="" />
+                   <img src="/tock.svg" alt="" />
                  </div>
                  <div className="">
                    <h3 className="font-bold">128h</h3>
@@ -44,7 +44,7 @@ const Profile = () => {
                 </div>
                 <div className="bg-white p-4 rounded-xl text-center flex gap-4 p-6">
                  <div className="">
-                   <img src="fire.svg" alt="" />
+                   <img src="/fire.svg" alt="" />
                  </div>
                  <div className="">
                    <h3 className="font-bold">15</h3>
@@ -59,16 +59,18 @@ const Profile = () => {
                   <h3 className="font-semibold">Active Tracks</h3>
                   <a href="#" className="text-orange-500 text-sm">View all</a>
                 </div>
-               <div className="flex gap-3.5 ">
+
+                {/*first card*/}
+               <div className="flex gap-7 items-center mb-9 ">
                 <div className="">
-                  <img src="public.svg" alt=""  className='rounded-2xl'/>
+                  <img src="/public.svg" alt=""  className='rounded-2xl'/>
                 </div>
-                <div className="">
-                <div className="flex justify-between">
+                <div className=" flex flex-col gap-3  ">
+                <div className="flex gap-20 ">
                     <h1 className='font-bold '>
                    Mastering Public Speaking
                   </h1>
-                  <span className='text-[#EC5B13]'>
+                  <span className='text-[#EC5B13] font-bold'>
                     75%
                   </span>
                 </div>
@@ -79,49 +81,76 @@ const Profile = () => {
                   <div className="bg-orange-500 h-2 rounded-full w-[75%]"></div>
                   </div>
                 </div>
-                <div clas>
-                  <img src="play.svg" alt="" />
+                <div>
+                  <img src="/play.svg" alt="" />
                 </div>
                </div>
-                <div className="bg-gray-50 p-4 rounded-xl mb-4">
-                  <div className="flex justify-between items-center mb-2">
-                    <div>
-                      <h4 className="font-medium">React Fundamentals</h4>
-                      <p className="text-xs text-gray-500">Frontend Development · 5 Lessons left</p>
-                    </div>
-                    <span className="text-sm text-orange-500">88%</span>
-                  </div>
-                  <div className="w-full bg-gray-200 h-2 rounded-full">
+
+               {/*second card*/}
+                 <div className="flex gap-7 items-center mb-9 ">
+                <div className="">
+                  <img src="/react.svg" alt=""  className='rounded-2xl'/>
+                </div>
+                <div className=" flex flex-col gap-3  ">
+                <div className="flex gap-20 ">
+                    <h1 className='font-bold '>
+                   React Fundamentals
+                  </h1>
+                  <span className='text-[#EC5B13] font-bold'>
+                    88%
+                  </span>
+                </div>
+                  <p className='text-gray-300'>
+                   Frontend Development • 5 Lessons left
+                  </p>
+                   <div className="w-full bg-gray-200 h-2 rounded-full">
                     <div className="bg-orange-500 h-2 rounded-full w-[88%]"></div>
                   </div>
                 </div>
-                <div className="bg-gray-50 p-4 rounded-xl">
-                  <div className="flex justify-between items-center mb-2">
-                    <div>
-                      <h4 className="font-medium">Color Theory for UI</h4>
-                      <p className="text-xs text-gray-500">Visual Design · 20 Lessons left</p>
-                    </div>
-                    <span className="text-sm text-orange-500">15%</span>
-                  </div>
-                  <div className="w-full bg-gray-200 h-2 rounded-full">
+                <div clas>
+                  <img src="/play.svg" alt="" />
+                </div>
+               </div>
+                {/*third card*/}
+                <div className="flex gap-7 items-center mb-9 ">
+                <div className="">
+                  <img src="/color.svg" alt=""  className='rounded-2xl'/>
+                </div>
+                <div className=" flex flex-col gap-3  ">
+                <div className="flex gap-20 ">
+                    <h1 className='font-bold '>
+                   Color Theory for UI
+                  </h1>
+                  <span className='text-[#EC5B13] font-bold'>
+                    15%
+                  </span>
+                </div>
+                  <p className='text-gray-300'>
+                  Visual Design • 20 Lessons left
+                  </p>
+                 <div className="w-full bg-gray-200 h-2 rounded-full">
                     <div className="bg-orange-500 h-2 rounded-full w-[15%]"></div>
                   </div>
                 </div>
+                <div>
+                  <img src="/play.svg" alt="" />
+                </div>
+               </div>
               </div>
               <div>
                 <div className="flex justify-between mb-4">
                   <h3 className="font-semibold">Badges</h3>
                   <span className="text-xs text-gray-400">12 total</span>
                 </div>
-                <div className="grid grid-cols-3 gap-3 mb-4">
-                  <div className="bg-gray-50 p-3 rounded-lg text-center text-xs">🥇<br/>BRONZE</div>
-                  <div className="bg-gray-50 p-3 rounded-lg text-center text-xs">🎯<br/>FOCUS</div>
-                  <div className="bg-gray-50 p-3 rounded-lg text-center text-xs">⭐<br/>7 DAY</div>
-                  <div className="bg-gray-50 p-3 rounded-lg text-center text-xs">🎓<br/>GRAD</div>
-                  <div className="bg-gray-50 p-3 rounded-lg text-center text-xs">💬<br/>HELPER</div>
-                  <div className="bg-gray-50 p-3 rounded-lg text-center text-xs">🏆<br/>CHAMP</div>
+                <div className="grid grid-cols-3 gap-3 mb-4 font-bold justify-center items-center">
+                  <div className=" p-3 rounded-lg text-center text-xs"><img src="/badge.svg" alt="" className='p-4' /><br/>EARLY BIRD</div>
+                  <div className=" p-3 rounded-lg text-center text-xs"><img src="/badge1.svg" alt="" className='p-4'  /><br/>PRO LEARNER</div>
+                  <div className=" p-3 rounded-lg text-center text-xs"><img src="/badge2.svg" alt="" className='p-4' /><br/>7 DAY STREAK</div>
+                  <div className=" p-3 rounded-lg text-center text-xs"><img src="/badge3.svg" alt=""className='p-4' /><br/>GRADUATED</div>
+                  <div className=" p-3 rounded-lg text-center text-xs"><img src="/badge4.svg" alt="" className='p-4' /><br/>HELPER</div>
+                  <div className=" p-3 rounded-lg text-center text-xs"><img src="/badge5.svg" alt=""className='p-4' /><br/>CHAMPION</div>
                 </div>
-                <div className="bg-gray-50 p-4 rounded-xl">
+                <div className="bg-[#EC5B130D] p-4 rounded-xl">
                   <h4 className="text-sm font-medium mb-2">Next Badge Progress</h4>
                   <p className="text-xs text-gray-500 mb-2">Complete 2 more lessons to earn "Top User"</p>
                   <div className="w-full bg-gray-200 h-2 rounded-full">

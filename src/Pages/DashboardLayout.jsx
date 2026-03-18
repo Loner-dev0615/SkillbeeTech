@@ -5,12 +5,12 @@ import Sidebar from '../Component/Sidebar';
 
 const DashboardLayout = () => {
   return (
-    <div className="flex h-screen bg-[#f8f6f6] text-slate-900">
+    <div className="flex h-screen bg-[#f8f6] text-slate-900">
       <Sidebar />
 
       <div className="flex-1 flex flex-col min-h-screen overflow-hidden">
         {/* Common Header */}
-        <header className="bg-white border-b border-gray-50 p-8 flex justify-between items-center z-40">
+        <header className="bg-[#f8f6f6] border-b border-gray-50 p-8 flex justify-between items-center z-40">
           <div className="relative w-full max-w-xl">
             <Search className="absolute left-4 top-3.5 text-gray-400" size={18} />
             <input
@@ -26,7 +26,7 @@ const DashboardLayout = () => {
               <p className="text-[10px] text-gray-500 uppercase font-bold tracking-wider">Beginner</p>
             </div>
             <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-orange-100 shadow-sm">
-              <img src="sam.jpg" alt="Alex Johnson" className="w-full h-full object-cover" />
+              <img src="/sam.jpg" alt="Alex Johnson" className="w-full h-full object-cover" />
             </div>
           </div>
         </header>

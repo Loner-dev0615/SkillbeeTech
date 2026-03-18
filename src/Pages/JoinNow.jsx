@@ -42,7 +42,7 @@ const JoinNow = () => {
                  {isLogin ? (
                     <>
                     <div className="">
-                        <img src="logosign.svg" alt="" className='mb-10' />
+                        <img src="/logosign.svg" alt="" className='mb-10' />
                     </div>
                         <h1 className='text-white text-4xl mb-4 mx-auto'>Login into your Skillbee Account</h1>
                         <p className='text-white'>Start your 5-min daily journey</p>
@@ -50,7 +50,7 @@ const JoinNow = () => {
                 ) : (
                     <>
                        <div className="">
-                        <img src="logosign.svg" alt="" className='mb-15' />
+                        <img src="/logosign.svg" alt="" className='mb-15' />
                     </div>
                         <h1 className='text-white text-4xl mb-4'>Join Skillbee</h1>
                         <p className='text-white'>Start your 5-min daily journey</p>

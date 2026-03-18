@@ -16,9 +16,11 @@ import LessonOverview from './Pages/LessonOverview'
 import LessonContent from './Pages/LessonContent'
 import DashboardLayout from './Pages/DashboardLayout'
 
+
 const App = () => {
   return (
     <Router>
+    
       <Routes>
         {/* Public Routes */}
         <Route path="/" element={<Landing />} />
@@ -37,6 +39,8 @@ const App = () => {
           <Route path="tracks" element={<div className="p-8">Tracks Page (Coming Soon)</div>} />
           <Route path="bookmarks" element={<div className="p-8">Bookmarks Page (Coming Soon)</div>} />
           <Route path="profile" element={<Profile />} />
+
+          
         </Route>
 
         {/* Individual Profile Route if accessed directly, 

@@ -6,7 +6,7 @@ const LessonContent = () => {
           
 
 
-<div className="max-w-5xl mx-auto px-6 py-8 bg-gray-100">
+<div className="w-full mx-auto px-6 py-8 bg-[#f8f6f6]">
 
 
  

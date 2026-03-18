@@ -20,7 +20,7 @@ const LessonOverview = () => {
 
   
   <div class="relative rounded-xl overflow-hidden mb-10">
-    <img src="video.svg" alt="Lesson Video"
+    <img src="/video.svg" alt="Lesson Video"
          class="w-[651px] h-[283px] object-cover"/>
 
    
@@ -46,7 +46,7 @@ const LessonOverview = () => {
       
         <div class="bg-white p-4 rounded-lg flex gap-3 items-start shadow-sm w-120">
           <div class="text-orange-500">
-            <img src="tick.svg" alt="" />
+            <img src="/tick.svg" alt="" />
           </div>
           <div>
             <p class="font-medium text-sm">The 5 essential Excel functions</p>
@@ -56,7 +56,7 @@ const LessonOverview = () => {
 
         <div class="bg-white p-4 rounded-lg flex gap-3 items-start shadow-sm w-120">
           <div class="text-orange-500">
-            <img src="tick.svg" alt="" />
+            <img src="/tick.svg" alt="" />
           </div>
           <div>
             <p class="font-medium text-sm">How to use VLOOKUP in real scenarios</p>
@@ -66,7 +66,7 @@ const LessonOverview = () => {
 
         <div class="bg-white p-4 rounded-lg flex gap-3 items-start shadow-sm w-120">
           <div class="text-orange-500">
-            <img src="tick.svg" alt="" />
+            <img src="/tick.svg" alt="" />
           </div>
           <div>
             <p class="font-medium text-sm">Pivot Tables for quick reporting</p>
@@ -76,7 +76,7 @@ const LessonOverview = () => {
 
         <div class="bg-white p-4 rounded-lg flex gap-3 items-start shadow-sm w-120">
           <div class="text-orange-500">
-            <img src="tick.svg" alt="" />
+            <img src="/tick.svg" alt="" />
           </div>
           <div>
             <p class="font-medium text-sm">Conditional Formatting mastery</p>
