@@ -15,7 +15,9 @@ import Profile from './Pages/Profile'
 import LessonOverview from './Pages/LessonOverview'
 import LessonContent from './Pages/LessonContent'
 import DashboardLayout from './Pages/DashboardLayout'
+import Settings  from './Pages/Settings';
 import Bookmark from './Pages/Bookmark';
+import Quiz from './Pages/Quiz';
 
 
 const App = () => {
@@ -36,10 +38,11 @@ const App = () => {
           <Route index element={<Dashboard />} />
           <Route path="lessonOverview" element={<LessonOverview />} />
           <Route path="lessonContent" element={<LessonContent />} />
-          <Route path="quiz" element={<div className="p-8">Quiz Page (Coming Soon)</div>} />
+          <Route path="quiz" element={<Quiz /> } />
           <Route path="tracks" element={<div className="p-8">Tracks Page (Coming Soon)</div>} />
           <Route path="bookmarks" element={<Bookmark />} />
           <Route path="profile" element={<Profile />} />
+          <Route path='settings' element={<Settings/>} />
 
           
         </Route>

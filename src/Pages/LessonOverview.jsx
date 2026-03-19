@@ -4,24 +4,24 @@ const LessonOverview = () => {
   return (
     <div>
       
-<div class="max-w-6xl mx-auto px-6 py-10 bg-gray-100">
+<div className="w-full mx-auto px-6 py-10 bg-gray-100">
 
  
  
 
   
-  <h1 class="text-2xl font-bold mb-2">
+  <h1 className="text-2xl font-bold mb-2">
     Excel Basics for Beginners
   </h1>
 
-  <p class="text-gray-600 text-sm mb-6">
+  <p className="text-gray-600 text-sm mb-6">
     Master The Fundamentals Of Spreadsheet Management And Data Organization From Scratch.
   </p>
 
   
-  <div class="relative rounded-xl overflow-hidden mb-10">
+  <div className="relative rounded-xl overflow-hidden mb-10">
     <img src="/video.svg" alt="Lesson Video"
-         class="w-[651px] h-[283px] object-cover"/>
+         className="w-[651px] h-[283px] object-cover"/>
 
    
    
@@ -31,56 +31,56 @@ const LessonOverview = () => {
   </div>
 
 
-  <div class="grid md:grid-cols-3 gap-4">
+  <div className="grid md:grid-cols-3 gap-4">
 
     
-    <div class="md:col-span-2">
+    <div className="md:col-span-2">
 
-      <h2 class="font-semibold mb-6 flex items-center gap-2">
-        <span class="w-1 h-5 bg-[#EC5B13] inline-block"></span>
+      <h2 className="font-semibold mb-6 flex items-center gap-2">
+        <span className="w-1 h-5 bg-[#EC5B13] inline-block"></span>
         What you'll learn
       </h2>
 
-      <div class="space-y-4">
+      <div className="space-y-4">
 
       
-        <div class="bg-white p-4 rounded-lg flex gap-3 items-start shadow-sm w-120">
-          <div class="text-orange-500">
+        <div className="bg-white p-4 rounded-lg flex gap-3 items-start shadow-sm w-120">
+          <div className="text-orange-500">
             <img src="/tick.svg" alt="" />
           </div>
           <div>
-            <p class="font-medium text-sm">The 5 essential Excel functions</p>
-            <p class="text-gray-500 text-xs">Learn SUM, AVERAGE, MIN, MAX, and COUNT to handle any basic data set.</p>
+            <p className="font-medium text-sm">The 5 essential Excel functions</p>
+            <p className="text-gray-500 text-xs">Learn SUM, AVERAGE, MIN, MAX, and COUNT to handle any basic data set.</p>
           </div>
         </div>
 
-        <div class="bg-white p-4 rounded-lg flex gap-3 items-start shadow-sm w-120">
-          <div class="text-orange-500">
+        <div className="bg-white p-4 rounded-lg flex gap-3 items-start shadow-sm w-120">
+          <div className="text-orange-500">
             <img src="/tick.svg" alt="" />
           </div>
           <div>
-            <p class="font-medium text-sm">How to use VLOOKUP in real scenarios</p>
-            <p class="text-gray-500 text-xs">Master the art of looking up data across multiple sheets efficiently.</p>
+            <p className="font-medium text-sm">How to use VLOOKUP in real scenarios</p>
+            <p className="text-gray-500 text-xs">Master the art of looking up data across multiple sheets efficiently.</p>
           </div>
         </div>
 
-        <div class="bg-white p-4 rounded-lg flex gap-3 items-start shadow-sm w-120">
-          <div class="text-orange-500">
+        <div className="bg-white p-4 rounded-lg flex gap-3 items-start shadow-sm w-120">
+          <div className="text-orange-500">
             <img src="/tick.svg" alt="" />
           </div>
           <div>
-            <p class="font-medium text-sm">Pivot Tables for quick reporting</p>
-            <p class="text-gray-500 text-xs">Summarize thousands of rows of data into a neat report in seconds.</p>
+            <p className="font-medium text-sm">Pivot Tables for quick reporting</p>
+            <p className="text-gray-500 text-xs">Summarize thousands of rows of data into a neat report in seconds.</p>
           </div>
         </div>
 
-        <div class="bg-white p-4 rounded-lg flex gap-3 items-start shadow-sm w-120">
-          <div class="text-orange-500">
+        <div className="bg-white p-4 rounded-lg flex gap-3 items-start shadow-sm w-120">
+          <div className="text-orange-500">
             <img src="/tick.svg" alt="" />
           </div>
           <div>
-            <p class="font-medium text-sm">Conditional Formatting mastery</p>
-            <p class="text-gray-500 text-xs">Make your data talk visually with colors, scales, and icons.</p>
+            <p className="font-medium text-sm">Conditional Formatting mastery</p>
+            <p className="text-gray-500 text-xs">Make your data talk visually with colors, scales, and icons.</p>
           </div>
         </div>
 
@@ -90,29 +90,29 @@ const LessonOverview = () => {
    
     <div>
 
-      <div class="bg-[#f6edea] p-6 rounded-lg shadow-sm mt-60 ml-10 ">
+      <div className="bg-[#f6edea] p-6 rounded-lg shadow-sm mt-60 ml-10 ">
 
-        <h3 class="font-semibold mb-4 flex items-center gap-2">
-          <span class="text-[#EC5B13]">
+        <h3 className="font-semibold mb-4 flex items-center gap-2">
+          <span className="text-[#EC5B13]">
             <img src="Icon.png" alt="" />
           </span>
           Lesson Details
         </h3>
 
-        <div class="space-y-1 text-sm text-gray-600">
-          <div class="flex justify-between">
+        <div className="space-y-1 text-sm text-gray-600">
+          <div className="flex justify-between">
             <span>Duration</span>
-            <span class="font-medium text-black">45 Minutes</span>
+            <span className="font-medium text-black">45 Minutes</span>
           </div>
 
-          <div class="flex justify-between">
+          <div className="flex justify-between">
             <span>Level</span>
-            <span class="font-medium text-black">Beginner</span>
+            <span className="font-medium text-black">Beginner</span>
           </div>
 
-          <div class="flex justify-between">
+          <div className="flex justify-between">
             <span>Total Lessons</span>
-            <span class="font-medium text-black">12 Modules</span>
+            <span className="font-medium text-black">12 Modules</span>
           </div>
         </div>
 

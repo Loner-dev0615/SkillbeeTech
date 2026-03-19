@@ -18,7 +18,7 @@ const LessonContent = () => {
 
  
   <div className="relative rounded-xl overflow-hidden mb-6 px-3">
-    <img src="vid.svg" 
+    <img src="/vid.svg" 
          className="w-[651px] h-[283px] object-cover"/>
 
    
