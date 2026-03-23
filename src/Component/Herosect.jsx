@@ -1,7 +1,7 @@
 import React from 'react'
 import Herosect1 from './Herosect1'
 import Herosect2 from './Herosect2'
-import Herosect3 from './herosect3'
+import Herosect3 from './Herosect3'
 import Herosect4 from './Herosect4'
 import Footer from './Footer'
 

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
-const API_KEY = "AIzaSyD4ySAcD1U18WPDkm0cX5ZoPL0zeVXfAp8";
+const API_KEY = import.meta.env.VITE_GEMINI_API_KEY;
 
 export default function QuizPage() {
   const location = useLocation();
@@ -142,7 +142,7 @@ export default function QuizPage() {
       <div className="min-h-screen bg-gray-100 p-6 flex justify-center items-center">
         <div className="bg-white p-10 rounded-3xl shadow-2xl max-w-md w-full text-center border border-orange-100">
           <div className="w-20 h-20 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-6">
-            <span className="text-4xl">🏆</span>
+            <span className="text-4xl"><img src="/big.svg" alt="" /></span>
           </div>
           <h2 className="text-3xl font-black mb-2 text-gray-900">Well Done!</h2>
           <p className="text-gray-500 mb-8">You have completed the <span className="font-bold text-gray-700">{topic}</span> quiz.</p>
@@ -155,9 +155,9 @@ export default function QuizPage() {
 
           <button
             onClick={() => navigate("/dashboard/quiz")}
-            className="w-full bg-orange-500 text-white py-4 rounded-2xl font-bold text-lg hover:bg-orange-600 transition-all shadow-lg hover:shadow-orange-200"
+            className="w-full bg-[#EC5B13] text-white py-4 rounded-2xl font-bold text-lg hover:bg-orange-600 transition-all shadow-lg hover:shadow-orange-200"
           >
-            Finish & Return
+            Next
           </button>
         </div>
       </div>

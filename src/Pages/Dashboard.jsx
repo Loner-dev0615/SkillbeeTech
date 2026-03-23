@@ -104,12 +104,8 @@ const Dashboard = () => {
               {recommendations.map((rec, i) => (
                 <div key={i} className="flex items-center justify-between group cursor-pointer">
                   <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 bg-[#fbe9e2] rounded-xl flex items-center justify-center text-[#f35b23]/60">
-                      <div className="border-2 border-current w-5 h-4 rounded-sm flex flex-col gap-0.5 p-0.5">
-                        <div className="w-full h-0.5 bg-current opacity-50"></div>
-                        <div className="w-full h-0.5 bg-current opacity-50"></div>
-                      </div>
-                    </div>
+                   
+                   <img src="/book.svg" alt="" />
                     <div>
                       <h5 className="text-[14px] font-bold leading-tight">{rec.title}</h5>
                       <p className="text-[10px] text-gray-400 font-bold uppercase mt-1">
@@ -118,7 +114,7 @@ const Dashboard = () => {
                     </div>
                   </div>
                   <div className="w-8 h-8 rounded-full border border-gray-100 flex items-center justify-center text-[#f35b23] hover:bg-orange-50">
-                    <FaPlayCircle size={14} />
+                   <img src="/play.svg" alt="" />
                   </div>
                 </div>
               ))}
