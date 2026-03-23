@@ -4,20 +4,32 @@ import Herosect2 from './Herosect2'
 import Herosect3 from './Herosect3'
 import Herosect4 from './Herosect4'
 import Footer from './Footer'
+import { motion } from 'framer-motion'
 
 const Herosect = () => {
     return (
         <div className='bg-[#f8f6f6]'>
             <section className="max-w-7xl mx-auto px-6 py-16 ">
 
-                <h2 className="text-3xl font-bold mb-10">
+                <motion.h2 
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    className="text-3xl font-bold mb-10"
+                >
                     How Skillbee works:
-                </h2>
+                </motion.h2>
 
                 <div className="grid md:grid-cols-3 gap-6">
 
 
-                    <div className="bg-white border border-gray-300 rounded-xl p-6 relative">
+                    <motion.div 
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.1 }}
+                        className="bg-white border border-gray-300 rounded-xl p-6 relative"
+                    >
 
                         <span className="absolute top-4 left-4 bg-green-300 text-black text-sm font-semibold px-2 py-1 rounded">
                             1
@@ -32,9 +44,7 @@ const Herosect = () => {
                             from first lesson to fluency.
                         </p>
 
-                        <div className
-
-                            ="mt-6 space-y-3">
+                        <div className="mt-6 space-y-3">
 
                             <div className="flex items-center justify-between bg-gray-100 p-3 rounded-lg">
                                 <div className="flex items-center gap-3">
@@ -71,11 +81,17 @@ const Herosect = () => {
 
                         </div>
 
-                    </div>
+                    </motion.div>
 
 
 
-                    <div className="bg-white border border-gray-300 rounded-xl p-6 relative">
+                    <motion.div 
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.2 }}
+                        className="bg-white border border-gray-300 rounded-xl p-6 relative"
+                    >
 
                         <span className="absolute top-4 left-4 bg-yellow-300 text-black text-sm font-semibold px-2 py-1 rounded">
                             2
@@ -93,14 +109,21 @@ const Herosect = () => {
                             <img
                                 src="woman.jpg"
                                 className="mt-30  h-[255px]  w-full object-cover rounded-lg"
+                                alt="Woman learning"
                             />
                         </div>
 
-                    </div>
+                    </motion.div>
 
 
 
-                    <div className="bg-white border border-gray-300 rounded-xl p-6 relative">
+                    <motion.div 
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.3 }}
+                        className="bg-white border border-gray-300 rounded-xl p-6 relative"
+                    >
 
                         <span className="absolute top-4 left-4 bg-blue-300 text-black text-sm font-semibold px-2 py-1 rounded">
                             3
@@ -118,9 +141,10 @@ const Herosect = () => {
                         <img
                             src="https://images.unsplash.com/photo-1587614382346-4ec70e388b28"
                             className="mt-10 rounded-lg h-44 w-full object-cover"
+                            alt="Progress"
                         />
 
-                    </div>
+                    </motion.div>
 
                 </div>
 

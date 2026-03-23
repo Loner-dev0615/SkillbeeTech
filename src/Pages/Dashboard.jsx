@@ -17,25 +17,25 @@ const Dashboard = () => {
   ];
 
   return (
-    <div className="flex-1 bg-[#f8f9fa] font-sans text-slate-900 p-10 overflow-y-auto min-h-screen">
+    <div className="flex-1 bg-[#f8f9fa] font-sans text-slate-900 p-4 md:p-10 overflow-y-auto min-h-screen">
 
       <p className="text-gray-400 text-[10px] font-bold uppercase tracking-tight mb-2">MONDAY, MARCH 23</p>
-      <h1 className="text-4xl font-bold mb-8 text-[#1a1d23]">Good morning, Alex </h1>
+      <h1 className="text-3xl md:text-4xl font-bold mb-6 md:mb-8 text-[#1a1d23]">Good morning, Alex </h1>
 
-      <div className="flex flex-col lg:flex-row gap-8">
+      <div className="flex flex-col lg:flex-row gap-6 md:gap-8">
         
         <div className="flex-[2]">
           
-          <div className="bg-[#f35b23] rounded-[32px] p-12 text-white relative overflow-hidden mb-12 shadow-2xl shadow-orange-200">
+          <div className="bg-[#f35b23] rounded-3xl md:rounded-[32px] p-6 md:p-12 text-white relative overflow-hidden mb-8 md:mb-12 shadow-2xl shadow-orange-200">
             <div className="relative z-10">
               <span className="bg-white/20 text-[9px] font-bold px-3 py-1.5 rounded-full uppercase tracking-widest">
                 Today's Lesson
               </span>
-              <h2 className="text-5xl font-bold mt-10 mb-10 max-w-lg leading-[1.1]">
+              <h2 className="text-3xl md:text-5xl font-bold mt-6 md:mt-10 mb-6 md:mb-10 max-w-lg leading-tight md:leading-[1.1]">
                 Excel Basics for Beginners: Mastering Formulas
               </h2>
 
-              <div className="flex gap-10 mb-10 text-xs font-medium">
+              <div className="flex flex-wrap gap-4 md:gap-10 mb-8 md:mb-10 text-xs font-medium">
                 <div className="flex items-center gap-2">
                   <div className="text-white/60"><BarChart2 size={16} /></div>
                   <span>Module: Data Foundation</span>
@@ -46,38 +46,36 @@ const Dashboard = () => {
                 </div>
               </div>
 
-              <div className="flex items-center gap-8">
-                <button className="bg-white text-[#f35b23] px-8 py-3.5 rounded-xl font-bold text-sm flex items-center gap-2 hover:bg-orange-50 transition-all">
+              <div className="flex flex-col sm:flex-row items-center gap-4 md:gap-8">
+                <button className="w-full sm:w-auto bg-white text-[#f35b23] px-8 py-3.5 rounded-xl font-bold text-sm flex items-center justify-center gap-2 hover:bg-orange-50 transition-all">
                   <FaPlayCircle size={16} /> Start Learning
                 </button>
                 <button className="text-white/90 font-bold text-xs hover:underline">View Syllabus</button>
               </div>
             </div>
             
-            
             <div className="absolute right-0 top-0 w-full h-full bg-gradient-to-br from-white/10 to-transparent pointer-events-none"></div>
           </div>
 
-          
           <div className="flex justify-between items-center mb-6">
             <h3 className="text-xl font-bold">My Tracks</h3>
-            <button className="text-[11px] font-bold text-gray-500 flex items-center gap-1">
+            <button className="text-[11px] font-bold text-gray-500 flex items-center gap-1 hover:text-orange-500 transition-colors">
               View All Tracks <span className="text-lg leading-none">›</span>
             </button>
           </div>
            
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8 lg:mb-0">
             {tracks.map((track, i) => (
-              <div key={i} className="bg-white p-8 rounded-[32px] shadow-sm border border-gray-50">
+              <div key={i} className="bg-white p-6 md:p-8 rounded-3xl md:rounded-[32px] shadow-sm border border-gray-50 hover:shadow-md transition-shadow">
                 <div className="flex justify-between mb-6">
                   <div className="p-2.5 bg-blue-50 text-blue-500 rounded-xl">
                     <BarChart2 size={20} />
                   </div>
-                  <button className="text-gray-300"><MoreHorizontal size={20} /></button>
+                  <button className="text-gray-300 hover:text-gray-500"><MoreHorizontal size={20} /></button>
                 </div>
 
                 <h4 className="font-bold text-lg mb-1">{track.title}</h4>
-                <p className="text-[11px] text-gray-400 font-bold mb-8 uppercase tracking-tight">{track.path}</p>
+                <p className="text-[11px] text-gray-400 font-bold mb-6 md:mb-8 uppercase tracking-tight">{track.path}</p>
 
                 <div className="flex justify-between text-[11px] font-black mb-2">
                   <span>{track.lessons} lessons</span>
@@ -85,44 +83,41 @@ const Dashboard = () => {
                 </div>
 
                 <div className="w-full bg-gray-100 h-1.5 rounded-full overflow-hidden">
-                  <div className="bg-[#f35b23] h-full" style={{ width: `${track.progress}%` }}></div>
+                  <div className="bg-[#f35b23] h-full transition-all duration-500" style={{ width: `${track.progress}%` }}></div>
                 </div>
               </div>
             ))}
           </div>
         </div>
 
-        
         <div className="flex-1 space-y-8">
           <div>
             <div className="flex justify-between items-center mb-6">
               <h4 className="text-[10px] font-black text-gray-400 uppercase tracking-widest">Recommended for you</h4>
-              <h4 className="text-[10px] font-black text-gray-400 uppercase tracking-widest cursor-pointer">New Feed</h4>
+              <h4 className="text-[10px] font-black text-gray-400 uppercase tracking-widest cursor-pointer hover:text-orange-500 transition-colors">New Feed</h4>
             </div>
 
             <div className="space-y-4">
               {recommendations.map((rec, i) => (
-                <div key={i} className="flex items-center justify-between group cursor-pointer">
+                <div key={i} className="flex items-center justify-between group cursor-pointer bg-white p-3 rounded-2xl md:bg-transparent md:p-0 hover:bg-white md:hover:bg-transparent transition-colors">
                   <div className="flex items-center gap-4">
-                   
-                   <img src="/book.svg" alt="" />
+                   <img src="/book.svg" alt="" className="w-10 h-10" />
                     <div>
-                      <h5 className="text-[14px] font-bold leading-tight">{rec.title}</h5>
+                      <h5 className="text-[14px] font-bold leading-tight group-hover:text-orange-500 transition-colors">{rec.title}</h5>
                       <p className="text-[10px] text-gray-400 font-bold uppercase mt-1">
                         {rec.category} <span className="mx-1">•</span> {rec.duration}
                       </p>
                     </div>
                   </div>
-                  <div className="w-8 h-8 rounded-full border border-gray-100 flex items-center justify-center text-[#f35b23] hover:bg-orange-50">
-                   <img src="/play.svg" alt="" />
+                  <div className="w-8 h-8 rounded-full border border-gray-100 flex items-center justify-center text-[#f35b23] hover:bg-orange-50 transition-colors">
+                   <img src="/play.svg" alt="" className="w-3 h-3" />
                   </div>
                 </div>
               ))}
             </div>
           </div>
 
-          
-          <div className="bg-white border-2 border-dashed border-gray-100 rounded-[40px] p-10 text-center flex flex-col items-center">
+          <div className="bg-white border-2 border-dashed border-gray-100 rounded-[40px] p-8 md:p-10 text-center flex flex-col items-center shadow-sm">
             <div className="w-12 h-12 bg-gray-50 rounded-2xl flex items-center justify-center mb-6 border border-gray-50">
               <CheckCircle className="text-slate-800" size={20} />
             </div>
