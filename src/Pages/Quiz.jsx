@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const coursesData = [
   {
@@ -60,7 +61,9 @@ const coursesData = [
 export default function CourseGrid() {
   const [selected, setSelected] = useState([]);
   const [showModal, setShowModal] = useState(false);
+  const [activeCourse, setActiveCourse] = useState(null);
   const [timeLimit, setTimeLimit] = useState(5);
+  const navigate = useNavigate();
 
   const toggleSelect = (id) => {
     setSelected((prev) =>
@@ -68,6 +71,24 @@ export default function CourseGrid() {
         ? prev.filter((item) => item !== id)
         : [...prev, id]
     );
+  };
+
+  const handleStartQuickQuiz = (course) => {
+    setActiveCourse(course);
+    setShowModal(true);
+  };
+
+  const handleStartQuiz = () => {
+    if (!activeCourse) return;
+    setShowModal(false);
+    navigate("/dashboard/quiz-page", { 
+      state: { 
+        courseId: activeCourse.id,
+        topic: activeCourse.title,
+        category: activeCourse.category,
+        timeLimit: timeLimit
+      } 
+    });
   };
 
   return (
@@ -127,7 +148,7 @@ export default function CourseGrid() {
 
               {/* Open Modal */}
               <button
-                onClick={() => setShowModal(true)}
+                onClick={() => handleStartQuickQuiz(course)}
                 className="w-full bg-orange-500 text-white py-2 rounded-lg hover:bg-orange-600 transition"
               >
                 Start Quick Quiz
@@ -138,7 +159,6 @@ export default function CourseGrid() {
       </div>
 
       {/* ✅ MODAL */}
-     {/* ✅ MODAL */}
 {showModal && (
   <div
     className="fixed inset-0 bg-black/40 flex items-center justify-center z-50"
@@ -162,40 +182,10 @@ export default function CourseGrid() {
       </div>
 
       <p className="text-sm text-gray-400 mb-6">
-        Personalize your learning session to fit your schedule.
+        Personalize your learning session for {activeCourse?.title}.
       </p>
 
       {/* TIME SECTION 1 */}
-      <div className="mb-6">
-        <p className="text-lg font-bold text-black mb-5 flex items-center gap-2">
-          <img src="/clock.svg" alt="" /> TIME PER QUIZ (MINUTES)
-        </p>
-
-        <div className="flex gap-3 mb-5">
-          {[5, 10, 15, 20].map((time) => (
-            <button
-              key={time}
-              onClick={() => setTimeLimit(time)}
-              className={`px-4 py-2 rounded-lg border text-sm ${
-                timeLimit === time
-                  ? "bg-[#EC5B13] text-white border-[#EC5B13]"
-                  : "bg-white text-gray-600"
-              }`}
-            >
-              {time}m
-            </button>
-          ))}
-        </div>
-
-        <input
-          type="number"
-          placeholder="Or enter custom duration"
-          className="w-full border border-gray-100 rounded-lg px-3 py-2 text-sm"
-          onChange={(e) => setTimeLimit(Number(e.target.value))}
-        />
-      </div>
-
-      {/* TIME SECTION 2 (optional like your design) */}
       <div className="mb-6">
         <p className="text-lg font-bold text-black mb-5 flex items-center gap-2">
           <img src="/clock.svg" alt="" /> TIME PER QUIZ (MINUTES)
@@ -245,10 +235,7 @@ export default function CourseGrid() {
         </button>
 
         <button
-          onClick={() => {
-            alert(`Starting quiz for ${timeLimit} minutes`);
-            setShowModal(false);
-          }}
+          onClick={handleStartQuiz}
           className="w-1/2 bg-[#EC5B13] text-white py-2 rounded-lg flex items-center justify-center gap-2"
         >
           Start Quiz →

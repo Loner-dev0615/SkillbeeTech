@@ -18,6 +18,7 @@ import DashboardLayout from './Pages/DashboardLayout'
 import Settings  from './Pages/Settings';
 import Bookmark from './Pages/Bookmark';
 import Quiz from './Pages/Quiz';
+import QuizPage from './Pages/QuizPage';
 
 
 const App = () => {
@@ -39,6 +40,7 @@ const App = () => {
           <Route path="lessonOverview" element={<LessonOverview />} />
           <Route path="lessonContent" element={<LessonContent />} />
           <Route path="quiz" element={<Quiz /> } />
+          <Route path="quiz-page" element={<QuizPage />} />
           <Route path="tracks" element={<div className="p-8">Tracks Page (Coming Soon)</div>} />
           <Route path="bookmarks" element={<Bookmark />} />
           <Route path="profile" element={<Profile />} />
