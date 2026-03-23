@@ -1,5 +1,6 @@
 import React from 'react'
 import { IoFlashOutline } from "react-icons/io5";
+import {Link} from 'react-router-dom'
 
 const Nav = () => {
   return (
@@ -23,8 +24,9 @@ const Nav = () => {
          </p>
         </div>
         <div className="flex gap-14.5 font-semibold">
-            <button>
+            <button> <Link to="/join">
                 Sign Up
+            </Link>
             </button>
             <button className='group flex border rounded-[55px] bg-[#EE5822] text-white px-6 py-2
              transition duration-300 align-center '>
