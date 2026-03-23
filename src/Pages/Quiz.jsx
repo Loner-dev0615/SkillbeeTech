@@ -1,6 +1,4 @@
-import React from 'react'
-
-import { useState } from "react";
+import React, { useState } from "react";
 
 const coursesData = [
   {
@@ -10,7 +8,7 @@ const coursesData = [
     questions: 5,
     level: "Beginner",
     progress: 80,
-    image: "/public/basic.jpg",
+    image: "/basic.jpg",
   },
   {
     id: 2,
@@ -19,7 +17,7 @@ const coursesData = [
     questions: 5,
     level: "Intermediate",
     progress: 68,
-    image: "/public/hello.jpg",
+    image: "/hello.jpg",
   },
   {
     id: 3,
@@ -28,7 +26,7 @@ const coursesData = [
     questions: 5,
     level: "Beginner",
     progress: 48,
-    image: "/public/timer.jpg",
+    image: "/timer.jpg",
   },
   {
     id: 4,
@@ -37,7 +35,7 @@ const coursesData = [
     questions: 5,
     level: "Beginner",
     progress: 80,
-    image: "/public/fund.jpg",
+    image: "/fund.jpg",
   },
   {
     id: 5,
@@ -46,7 +44,7 @@ const coursesData = [
     questions: 5,
     level: "Intermediate",
     progress: 12,
-    image: "/public/pen.jpg",
+    image: "/pen.jpg",
   },
   {
     id: 6,
@@ -55,12 +53,14 @@ const coursesData = [
     questions: 5,
     level: "Intermediate",
     progress: 5,
-    image: "/public/scrabble.jpg",
+    image: "/scrabble.jpg",
   },
 ];
 
 export default function CourseGrid() {
   const [selected, setSelected] = useState([]);
+  const [showModal, setShowModal] = useState(false);
+  const [timeLimit, setTimeLimit] = useState(5);
 
   const toggleSelect = (id) => {
     setSelected((prev) =>
@@ -68,10 +68,6 @@ export default function CourseGrid() {
         ? prev.filter((item) => item !== id)
         : [...prev, id]
     );
-  };
-
-  const handleStart = (title) => {
-    alert(`Starting quiz for: ${title}`);
   };
 
   return (
@@ -91,7 +87,6 @@ export default function CourseGrid() {
                 className="w-full h-40 object-cover"
               />
 
-              {/* Checkbox */}
               <input
                 type="checkbox"
                 checked={selected.includes(course.id)}
@@ -130,9 +125,9 @@ export default function CourseGrid() {
                 />
               </div>
 
-              {/* Button */}
+              {/* Open Modal */}
               <button
-                onClick={() => handleStart(course.title)}
+                onClick={() => setShowModal(true)}
                 className="w-full bg-orange-500 text-white py-2 rounded-lg hover:bg-orange-600 transition"
               >
                 Start Quick Quiz
@@ -140,8 +135,129 @@ export default function CourseGrid() {
             </div>
           </div>
         ))}
-
       </div>
+
+      {/* ✅ MODAL */}
+     {/* ✅ MODAL */}
+{showModal && (
+  <div
+    className="fixed inset-0 bg-black/40 flex items-center justify-center z-50"
+    onClick={() => setShowModal(false)}
+  >
+    <div
+      className="bg-white w-[95%] max-w-lg rounded-2xl p-6 shadow-xl"
+      onClick={(e) => e.stopPropagation()}
+    >
+      {/* Header */}
+      <div className="flex justify-between items-center mb-5">
+        <h2 className="text-2xl font-bold">
+          Configure Your Quiz
+        </h2>
+        <button
+          onClick={() => setShowModal(false)}
+          className="text-gray-400 hover:text-gray-600"
+        >
+          ✕
+        </button>
+      </div>
+
+      <p className="text-sm text-gray-400 mb-6">
+        Personalize your learning session to fit your schedule.
+      </p>
+
+      {/* TIME SECTION 1 */}
+      <div className="mb-6">
+        <p className="text-lg font-bold text-black mb-5 flex items-center gap-2">
+          <img src="/clock.svg" alt="" /> TIME PER QUIZ (MINUTES)
+        </p>
+
+        <div className="flex gap-3 mb-5">
+          {[5, 10, 15, 20].map((time) => (
+            <button
+              key={time}
+              onClick={() => setTimeLimit(time)}
+              className={`px-4 py-2 rounded-lg border text-sm ${
+                timeLimit === time
+                  ? "bg-[#EC5B13] text-white border-[#EC5B13]"
+                  : "bg-white text-gray-600"
+              }`}
+            >
+              {time}m
+            </button>
+          ))}
+        </div>
+
+        <input
+          type="number"
+          placeholder="Or enter custom duration"
+          className="w-full border border-gray-100 rounded-lg px-3 py-2 text-sm"
+          onChange={(e) => setTimeLimit(Number(e.target.value))}
+        />
+      </div>
+
+      {/* TIME SECTION 2 (optional like your design) */}
+      <div className="mb-6">
+        <p className="text-lg font-bold text-black mb-5 flex items-center gap-2">
+          <img src="/clock.svg" alt="" /> TIME PER QUIZ (MINUTES)
+        </p>
+
+        <div className="flex gap-3 mb-5">
+          {[5, 10, 15, 20].map((time) => (
+            <button
+              key={time}
+              onClick={() => setTimeLimit(time)}
+              className={`px-4 py-2 rounded-lg border text-sm ${
+                timeLimit === time
+                  ? "bg-[#EC5B13] text-white border-[#EC5B13]"
+                  : "bg-white text-gray-600"
+              }`}
+            >
+              {time}m
+            </button>
+          ))}
+        </div>
+
+        <input
+          type="number"
+          placeholder="Or enter custom duration"
+          className="w-full border border-gray-100 rounded-lg px-3 py-2 text-sm"
+          onChange={(e) => setTimeLimit(Number(e.target.value))}
+        />
+      </div>
+
+      {/* TOTAL TIME */}
+      <div className="flex justify-between items-center mb-8">
+        <span className="text-sm text-gray-400">
+          Estimated total time:
+        </span>
+        <span className="text-[#EC5B13] font-semibold">
+          {timeLimit} minutes
+        </span>
+      </div>
+
+      {/* ACTIONS */}
+      <div className="flex gap-3 mb-5">
+        <button
+          onClick={() => setShowModal(false)}
+          className="w-1/2 border rounded-lg py-2 text-gray-600"
+        >
+          Cancel
+        </button>
+
+        <button
+          onClick={() => {
+            alert(`Starting quiz for ${timeLimit} minutes`);
+            setShowModal(false);
+          }}
+          className="w-1/2 bg-[#EC5B13] text-white py-2 rounded-lg flex items-center justify-center gap-2"
+        >
+          Start Quiz →
+        </button>
+      </div>
+    </div>
+  </div>
+)}
+     
     </div>
   );
 }
