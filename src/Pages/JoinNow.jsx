@@ -36,9 +36,9 @@ const JoinNow = () => {
     };
 
     return (
-        <div className='flex gap-0 bg-gray-300 mb-0 h-200 w-full'>
-            <div className="bg-[#EE5822]   flex-col h-[275.25] w-2xl">
-               <div className="mt-70 ml-55.75 items-center gap-2.75">
+        <div className='flex gap-0 bg-gray-300 mb-0 h-screen w-full'>
+            <div className="bg-[#EE5822]   flex-col h-[275.25] w-200">
+               <div className="mt-70 ml-45.75 items-center gap-2.75">
                  {isLogin ? (
                     <>
                     <div className="">
@@ -60,8 +60,9 @@ const JoinNow = () => {
             </div>
 
             
-            <div className='justify-center items-center flex flex-col gap-4 flex-1 overflow-y-auto border-96 p-3 border-gray-300 bg-white rounded-[140px] p-6 w-107 ml-40 mr-14 w-full '>
-                <div className='flex gap-0 bg-white rounded-md w-107 overflow-hidden text-center mb-4  '>
+            <div className='flex justify-center items-center flex-col gap-7 bg-[#f8f6f6] h-screen w-200  '>
+             <div className="gap-7 flex flex-col bg-[#fafafa] rounded-2xl justify-center items-center w-[500px] h-[628px]">
+                   <div className='flex gap-0 bg-white rounded-md w-107 overflow-hidden text-center mb-4  '>
                     <button 
                         onClick={() => setIsLogin(true)}
                         className={`flex-1 py-3 font-semibold transition-all ${
@@ -165,6 +166,7 @@ const JoinNow = () => {
                     </>
                 )}
             </div>
+             </div>
            
         </div>
     )
