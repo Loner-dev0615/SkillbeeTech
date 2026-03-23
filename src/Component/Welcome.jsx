@@ -7,7 +7,7 @@ const Welcome = () => {
   return (
     <div>
       <div className="flex justify-center items-center mt-20 mb-10">
-        <img src="rena.svg" alt="" />
+        <img src="Area.svg" alt="" />
       </div>
       <div className="justify-center items-center text-center mt-10">
         <h1 className='font-bold text-3xl mb-4'>
