@@ -37,7 +37,11 @@ const JoinNow = () => {
 
     return (
         <div className='flex gap-0 bg-gray-300 mb-0 h-screen w-full'>
+           
             <div className="bg-[#EE5822]   flex-col h-[275.25] w-200">
+                 <div className="">
+                <img src="/bbb.svg" alt="" />
+            </div>
                <div className="mt-70 ml-45.75 items-center gap-2.75">
                  {isLogin ? (
                     <>

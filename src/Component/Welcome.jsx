@@ -4,6 +4,9 @@ import { Link } from 'react-router-dom'
 const Welcome = () => {
   return (
     <div className="max-w-7xl mx-auto px-6 py-12">
+      <div className="">
+        <img src="/444.svg" alt="" />
+      </div>
       <div className="flex justify-center items-center mt-10 md:mt-20 mb-10">
         <img src="Area.svg" alt="Illustration" className="max-w-xs md:max-w-md" />
       </div>
