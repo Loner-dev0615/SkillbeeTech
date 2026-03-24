@@ -101,7 +101,7 @@ const Dashboard = () => {
               {recommendations.map((rec, i) => (
                 <div key={i} className="flex items-center justify-between group cursor-pointer bg-white p-3 rounded-2xl md:bg-transparent md:p-0 hover:bg-white md:hover:bg-transparent transition-colors">
                   <div className="flex items-center gap-4">
-                   <img src="/book.svg" alt="" className="w-10 h-10" />
+                   <img src="/book.svg" alt="" className="w-15 h-15" />
                     <div>
                       <h5 className="text-[14px] font-bold leading-tight group-hover:text-orange-500 transition-colors">{rec.title}</h5>
                       <p className="text-[10px] text-gray-400 font-bold uppercase mt-1">
@@ -110,7 +110,7 @@ const Dashboard = () => {
                     </div>
                   </div>
                   <div className="w-8 h-8 rounded-full border border-gray-100 flex items-center justify-center text-[#f35b23] hover:bg-orange-50 transition-colors">
-                   <img src="/play.svg" alt="" className="w-3 h-3" />
+                   <img src="/play.svg" alt="" className="w-10 h-10" />
                   </div>
                 </div>
               ))}
