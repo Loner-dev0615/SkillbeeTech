@@ -168,7 +168,7 @@ export default function QuizPage() {
     <div className="min-h-screen bg-gray-100 p-6 flex justify-center">
       <div className="w-full max-w-2xl">
 
-        {/* Header */}
+      
         <p className="text-sm text-gray-400 mb-1">
           {category} &gt; {topic}
         </p>
@@ -177,7 +177,7 @@ export default function QuizPage() {
           Quick Check: {topic}
         </h1>
 
-        {/* Progress Card */}
+       
         <div className="bg-white p-4 rounded-xl shadow-sm mb-6">
           <p className="text-xs text-orange-500 font-semibold mb-1">
             CURRENT PROGRESS
@@ -188,7 +188,7 @@ export default function QuizPage() {
             <span className="text-orange-500">{Math.round(progress)}%</span>
           </div>
 
-          {/* Progress bar */}
+         
           <div className="w-full h-2 bg-gray-200 rounded-full mb-2">
             <div 
               className="h-2 bg-orange-500 rounded-full transition-all duration-500" 
@@ -201,12 +201,12 @@ export default function QuizPage() {
           </p>
         </div>
 
-        {/* Question */}
+     
         <h2 className="text-lg font-medium mb-4 min-h-[3rem]">
           {currentQuestion.question}
         </h2>
 
-        {/* Options */}
+       
         <div className="space-y-3 mb-6">
           {currentQuestion.options.map((opt) => (
             <div
@@ -220,7 +220,7 @@ export default function QuizPage() {
                 }`}
             >
               <div className="flex items-center gap-3">
-                {/* Letter */}
+            
                 <div
                   className={`w-8 h-8 flex items-center justify-center rounded-md text-sm font-semibold
                     ${
@@ -235,7 +235,7 @@ export default function QuizPage() {
                 <p className="text-sm">{opt.text}</p>
               </div>
 
-              {/* Check icon */}
+            
               {currentSelected === opt.id && (
                 <span className="text-orange-500">✔</span>
               )}
@@ -243,7 +243,7 @@ export default function QuizPage() {
           ))}
         </div>
 
-        {/* Footer */}
+       
         <div className="flex justify-between items-center">
           <button 
             onClick={handlePrevious}

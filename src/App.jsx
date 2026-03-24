@@ -26,7 +26,7 @@ const App = () => {
     <Router>
     
       <Routes>
-        {/* Public Routes */}
+        
         <Route path="/" element={<Landing />} />
         <Route path="/welcome" element={<Welcome />} />
         <Route path="/join" element={<JoinNow />} />
@@ -34,7 +34,7 @@ const App = () => {
         <Route path="/reminder" element={<ReminderPage />} />
         <Route path="/landing" element={<Landing />} />
         
-        {/* Protected/Dashboard Routes using DashboardLayout */}
+      
         <Route path="/dashboard" element={<DashboardLayout />}>
           <Route index element={<Dashboard />} />
           <Route path="lessonOverview" element={<LessonOverview />} />
@@ -49,14 +49,13 @@ const App = () => {
           
         </Route>
 
-        {/* Individual Profile Route if accessed directly, 
-            but it's better handled inside the layout */}
+        
         <Route path="/profile" element={<Navigate to="/dashboard/profile" replace />} />
         
-        {/* Redirect /dashboard-layout if it exists in bookmarks/history */}
+       
         <Route path="/dashboard-layout" element={<Navigate to="/dashboard" replace />} />
 
-        {/* Fallback */}
+     
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </Router>
