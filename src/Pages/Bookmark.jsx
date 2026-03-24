@@ -52,7 +52,7 @@ const Bookmark = () => {
     </div>
 
     
-    <div className="space-y-4 w-[793px] h-[21] ">
+    <div className="space-y-4 w-[793px] h-[21] bg-[#f7f5f5]">
 
 
       <div className="flex justify-between items-center border rounded-2xl border-[#EC5B1333] bg-white   px-4 py-4">
