@@ -6,7 +6,7 @@ export default function App() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
 
-      {/* Button to open modal */}
+     
       <button
         onClick={() => setOpen(true)}
         className="bg-orange-500 text-white px-6 py-2 rounded-lg"
@@ -14,7 +14,7 @@ export default function App() {
         Open Modal
       </button>
 
-      {/* Modal */}
+      
       {open && (
         <div className="fixed inset-0 flex items-center justify-center bg-black/50">
 
@@ -28,14 +28,14 @@ export default function App() {
               Select your options before starting.
             </p>
 
-            {/* Example content */}
+            
             <select className="w-full border p-2 rounded mb-4">
               <option>5 Minutes</option>
               <option>10 Minutes</option>
               <option>15 Minutes</option>
             </select>
 
-            {/* Actions */}
+          
             <div className="flex justify-end gap-3">
               <button
                 onClick={() => setOpen(false)}

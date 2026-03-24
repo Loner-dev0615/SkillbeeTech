@@ -1,12 +1,12 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 
-// Component imports
+
 import Landing from './Component/Landing'
 import Welcome from './Component/Welcome'
 import Nav from './Component/Nav'
 
-// Page imports
+
 import JoinNow from './Pages/JoinNow'
 import Onboarding from './Pages/Onboarding'
 import ReminderPage from './Pages/ReminderPage'

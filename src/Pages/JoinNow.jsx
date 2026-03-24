@@ -88,12 +88,12 @@ const JoinNow = () => {
                 
                 {isLogin && (
                     <>
-                        <div className='flex flex-col gap-2 bg-white border p-2 rounded-md w-107 left-120px'>
+                        <div className='flex flex-col gap-2 bg-white  p-2 rounded-md w-107 left-120px'>
                             <span className='text-gray-500'>Email</span>
                             <input type="text" placeholder='alexjohnson@gmail.com' onChange={(e) => setEmail(e.target.value)} />
                         </div>
 
-                        <div className='flex flex-col gap-2 bg-white border p-2 rounded-md w-107 left-120px'>
+                        <div className='flex flex-col gap-2 bg-white  p-2 rounded-md w-107 left-120px'>
                             <span className='text-gray-500'>Password</span>
                             <div className='flex justify-between'>
                                 <input type={showPassword ? "text" : "password"} placeholder='XXXXXXXXXXXX' onChange={(e) => setPassword(e.target.value)} />
@@ -119,23 +119,23 @@ const JoinNow = () => {
                 {!isLogin && (
                     <>
                         <div className='flex flex-row gap-7 max-h-19'>
-                            <div className='flex flex-col gap-2 bg-white border p-2 rounded-md max-w-sm left-120px max-h-20'>
+                            <div className='flex flex-col gap-2 bg-white  p-2 rounded-md max-w-sm left-120px max-h-20'>
                                 <span className='text-gray-500'>First name</span>
                                 <input type="text" placeholder='Alex' onChange={(e) => setFirstName(e.target.value)} />
                             </div>
 
-                            <div className='flex flex-col gap-2 bg-white border p-2 rounded-md max-w-sm left-120px'>
+                            <div className='flex flex-col gap-2 bg-white  p-2 rounded-md max-w-sm left-120px'>
                                 <span className='text-gray-500'>Last name</span>
                                 <input type="text" placeholder='Johnson' onChange={(e) => setLastName(e.target.value)} />
                             </div>
                         </div>
 
-                        <div className='flex flex-col gap-2 bg-white border p-2 rounded-md w-107 left-120px'>
+                        <div className='flex flex-col gap-2 bg-white  p-2 rounded-md w-107 left-120px'>
                             <span className='text-gray-500'>Email</span>
                             <input type="text" placeholder='alexjohnson@gmail.com' onChange={(e) => setEmail(e.target.value)} />
                         </div>
 
-                        <div className='flex flex-col gap-2 bg-white border p-2 rounded-md w-107 left-120px'>
+                        <div className='flex flex-col gap-2 bg-white  p-2 rounded-md w-107 left-120px'>
                             <span className='text-gray-500'>Password</span>
                             <div className='flex justify-between'>
                                 <input type={showPassword ? "text" : "password"} placeholder='XXXXXXXXXXXX' onChange={(e) => setPassword(e.target.value)} />
@@ -145,7 +145,7 @@ const JoinNow = () => {
                             </div>
                         </div>
 
-                        <div className='flex flex-col gap-2 bg-white border p-2 rounded-md w-107 left-120px'>
+                        <div className='flex flex-col gap-2 bg-white  p-2 rounded-md w-107 left-120px'>
                             <span className='text-gray-500'>Confirm Password</span>
                             <div className='flex justify-between'>
                                 <input type={showConfirmPassword ? "text" : "password"} placeholder='XXXXXXXXXXXX' onChange={(e) => setConfirmPassword(e.target.value)} />
